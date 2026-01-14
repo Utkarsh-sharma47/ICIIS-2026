@@ -4,38 +4,31 @@ import Marquee from "./Marquee"
 function MainSection() {
     const RegularTracks = [
         {
-            heading: "Track 1: Vision Computing:",
-            content: "Image/video processing, Image/video synthesis, Image Enhancement/Super Resolution/Restoration, Image/Video Retrieval, Remote sensing, Multispectral/Hyperspectral image Processing, Segmentation and Shape Representation, Image/Video Scene Understanding, Medical Image and Video Analysis, Stereo Vision, Document Image Analysis, Image and Video Matching."
+            heading: "Track 1: Image, Signal & Artificial Intelligence",
+            content: "This track explores advanced paradigms in Image and Signal Processing alongside the latest breakthroughs in Artificial Intelligence and Machine Learning. It specifically highlights critical areas such as Trustworthy & Explainable AI and Pattern Recognition, aiming to bridge theoretical models with practical, real-world applications in computer vision and signal analysis."
         },
         {
-            heading: "Track 2: Cybersecurity and Forensics:",
-            content: "Network and cyber security, Computer security, Systems security, Security policy, model and architecture, Formal methods and verification, Security in mobile and wireless communications,  Privacy and trust, Attacks on AI models, Privacy preservation of AI, Malware forensics, Mobile app forensics, Blockchains and distributed ledger security, IoT security."
+            heading: "Track 2: Embedded & Intelligent Systems",
+            content: "Focusing on the intersection of hardware and intelligence, this track covers Embedded System Design and the emerging challenges in Ethical IoT & Smart Devices. It also addresses Data Engineering methodologies and the development of robust Intelligent Systems and Expert Systems, emphasizing efficient computing and intelligent decision-making frameworks."
         },
         {
-            heading: "Track 3: AI and Data Science:",
-            content: "Computational Intelligence, Optimization Techniques, Explainable AI, Value AI, Robotic Intelligence, Data Intelligence, Multimedia Intelligent Systems, Document and Synthetic Visual Processing, Transfer Learning, Multi-task Learning, Evolutionary Algorithms, Graph Convolutional Networks, Applications in AI."
+            heading: "Track 3: Communication & Information Technologies",
+            content: "This track offers a comprehensive look at the future of connectivity, featuring research on Wireless Communication Technologies and Secure & Trustworthy Communications. It delves into the convergence of IoT, Networks & Cybersecurity, with a special emphasis on designing Green and Sustainable Communication Systems for the next generation of networks."
         },
         {
-            heading: "Track 4: Communication Networks:",
-            content: "Next-Generation Internet Architectures, Software-Defined Networking (SDN), Network Function Virtualization (NFV), Protocol Design and Optimization, Network Interoperability, Cellular Networks (5G, 6G, and Beyond), Ad Hoc, Mesh, and Sensor Networks, Vehicular Networks (VANETs, V2X), Data Dissemination in Intelligent Transportation System, Low-Power Wide-Area Networks (LPWANs), Wireless Body Area Networks (WBANs), AI/ML in Communication Networks, Multimedia Streaming Services, IoT-Fog interconnection Network, Mobile Edge Computing, Cloud Computing etc."
+            heading: "Track 4: Power, Energy & High Voltage Engineering",
+            content: "Addressing global energy challenges, this track presents innovations in Smart Grid Technologies and Renewable Energy Systems. Discussions will center on advanced Power Electronics and strategies for Energy-Efficient High Voltage Engineering, aiming to ensure reliable, sustainable, and resilient power infrastructure."
         },
         {
-            heading: "Track 5: Cyber Physical Systems and IoT:",
-            content: "Smart Cities and Infrastructure, Industrial IoT (IIoT) and Smart Manufacturing, Edge Computing and IoT, Security and Privacy in IoT and CPS, Sensors and Actuators in IoT, IoT Data Analytics and Machine Learning, Healthcare and Medical IoT (Health IoT), Energy Management and Smart Grids, CPS for autonomous robots and drones, Standards and Interoperability in IoT."
+            heading: "Track 5: Control, Robotics & Automation",
+            content: "Highlighting the evolution of automation, this track spans the cutting edge of Robotics and Autonomous Systems and Human-Centric Control Systems. It explores how these technologies are driving Automation for Sustainable Industries, fostering greater efficiency, safety, and adaptability in modern industrial environments."
         },
         {
-            heading: "Track 6: Robotics and Autonomous Systems:",
-            content: "SLAM, Sensor Fusion, AI navigation, Deep/reinforcement learning in robotics, Swarm coordination, Automation in manufacturing, Healthcare, Agriculture. Autonomous Vehicles, UAVs, Underwater Robots, Human-Robot interaction and Assistive Robotics, Cybersecurity in Robotics, Multi Agent Systems, Emergent behaviour."
-        },
-        {
-            heading: "Track 7: Computer and Software Systems:",
-            content: "Computer Architecture, Distributed Systems, High-Performance Computing, Embedded Systems, Cloud Computing, Human-Computer Interaction, Software architecture and design patterns, Secure software development and Static Code Analysis, Model-driven engineering and low-code development, Open-source software development and governance, Software testing, verification, and validation."
-        },
-        {
-            heading: "Track 8: Emerging Computing Technologies and Systems:",
-            content: "Social Networks and Complex Networks, Algorithmic Game Theory and Computational Economics, Blockchain and Decentralized Systems, Post-Quantum Computing and Cryptography, Emerging Computing Paradigms, Ethics, Privacy, and Trust in Emerging Technologies, Applications of Emerging Technologies."
+            heading: "Track 6: FPGA, EDA Tools & VLSI Design",
+            content: "Dedicated to the backbone of computing hardware, this track features research on FPGA-based System Design and Secure Hardware architectures. It examines the latest advancements in VLSI and EDA tools, alongside techniques for creating Low-power Hardware Architectures essential for energy-constrained applications."
         },
     ]
+
     const updates = [
         // { text: "Third Phase Paper Submission Starts on 02 August 2025" },
         // { text: "Extended Second Phase Paper Submission Deadline 20 July 2025" },
@@ -52,26 +45,20 @@ function MainSection() {
             url: "/schedule",
         },
         {
-            text: "Accomodation is available at ABV-IIITM Gwalior",
+            text: "Accommodation is available at ABV-IIITM Gwalior",
             url: "/attende",
         },
-        {text:"Second Phase Acceptance Notification mail has been sent"},
+        { text: "Second Phase Acceptance Notification mail has been sent" },
         {
             text: "Keynote Speakers",
             url: "/speakers",
             style: "color: blue;"
         },
-        // {text:"First Phase Paper Submission Link", 
-        // url: "https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FReACS2025%2F",
-        // style: ""},
-        // {text:"Final Extended Paper Submission Deadline 06 June 2025"},
         {
             text: "Camera Ready Submission Guidelines",
             url: "/crs",
             style: "color: blue;"
         },
-        // { text: "Second Phase Paper Submission Starts on 07 June 2025" },
-        // {text:"Call for Papers Brochure", url: "https://reacs2025.s3.ap-south-1.amazonaws.com/CFP_Brochure.pdf"}
     ]
 
     return (
@@ -81,17 +68,25 @@ function MainSection() {
             </div>
 
             <div className="mb-6 pb-4 border-b-1">
-                <div className="heading-cl text-3xl md:text-4xl tracking-normal font-bold">Welcome to ReACS 2026</div>
-                <div className="text-sm/relaxed mt-4 tracking-wide text-justify"><span className="font-semibold">Welcome to the 2026 IEEE International Conference on Recent Advances in Computing and Systems (ReACS2026) is being organised by the Department of CSE, ABV-IIITM</span>, to functionalize it as a platform for dissemination of recent high-quality research work in the domain of Computing and Systems. This conference (<a href="https://conferences.ieee.org/conferences_events/conferences/conferencedetails/67479" className="text-blue-600 underline font-semibold">IEEE Conference ID: 67479</a>) covers the wide domain of Computer Science and Engineering and will provide a means to exchange innovative ideas and recent advances among researchers from academia and industry.</div>
+                <div className="heading-cl text-3xl md:text-4xl tracking-normal font-bold">Welcome to ICIIS 2026</div>
+                <div className="text-sm/relaxed mt-4 tracking-wide text-justify">
+                    <span className="font-semibold">ICIIS 2026 covers a wide range of engineering disciplines, with added focus on sustainability and trustworthiness.</span> The conference is being organised to function as a platform for dissemination of recent high-quality research work. It covers the wide domain of Computer Science, Electronics, and Electrical Engineering and will provide a means to exchange innovative ideas and recent advances among researchers from academia and industry.
+                </div>
             </div>
+
             <div className="flex md:space-x-8">
                 <div className="md:w-[70%]">
                     <div>
-                        <div className="heading-cl text-2xl md:text-3xl font-bold text-justify mb-6">Regular Tracks</div>
+                        <div className="heading-cl text-2xl md:text-3xl font-bold text-justify mb-8">Regular Tracks</div>
                         {RegularTracks.map((item, index) => (
-                            <div key={index} className="mt-4 md:mt-5">
-                                <div className="text-black tracking-wider text-md md:text-lg font-bold">{item.heading}</div>
-                                <div className="text-justify tracking-wider text-sm/relaxed mt-1">{item.content}</div>
+                            <div key={index} className="mt-6 md:mt-8">
+                                {/* Enlarged Heading: text-xl on mobile, text-2xl on desktop, with brand color */}
+                                <div className="text-[#000000d0] tracking-wide text-xl md:text-2xl font-bold mb-2">
+                                    {item.heading}
+                                </div>
+                                <div className="text-justify text-gray-700 tracking-wide text-sm/relaxed leading-6">
+                                    {item.content}
+                                </div>
                             </div>
                         ))}
                         <div className="md:hidden my-5 border-t-1 pt-6">
