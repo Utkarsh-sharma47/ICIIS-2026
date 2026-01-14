@@ -88,10 +88,10 @@ function HeroSection() {
             />
           </div>
           <p className="text-md tracking-wider md:text-xl text-white text-center max-w-4xl mx-auto font-semibold">
-            2025 IEEE International Conference on Recent Advances in Computing and Systems
+            2026 IEEE International Conference on Recent Advances in Computing and Systems
           </p>
           <p className="mt-4 tracking-wider text-sm md:text-lg text-white text-center font-bold">
-            19-20 December 2025 &#x2022; ABV-IIITM Gwalior, India
+            XX-XX December 2026 &#x2022; ABV-IIITM Gwalior, India
           </p>
           <p className="mt-4 tracking-wider text-sm md:text-lg text-white text-center font-bold">
             Conference Successfully Concluded
@@ -217,7 +217,7 @@ function HeroSection() {
                 <div className="flex items-center justify-between mt-20 my-6">
                   <div className="flex items-center">
                     <div className="pl-4 rounded-lg flex items-center justify-center">
-                      <h1 className="text-3xl font-bold">ReACS 2025</h1>
+                      <h1 className="text-3xl font-bold">ReACS 2026</h1>
                     </div>
                   </div>
                 </div>

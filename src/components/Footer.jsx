@@ -9,8 +9,8 @@ function Footer() {
         <div className="flex flex-col md:flex-row gap-6 md:gap-12 my-6 text-sm">
         <div className="w-full md:w-1/3">
             <div className="text-xl">ReACS</div>
-            <div className="mt-3">2025 IEEE International Conference on Recent Advances in Computing and Systems</div>
-            <div className="mt-2">19-20 December 2025 &#x2022; ABV-IIITM Gwalior, India</div>
+            <div className="mt-3">2026 IEEE International Conference on Recent Advances in Computing and Systems</div>
+            <div className="mt-2">XX-XX December 2026 &#x2022; ABV-IIITM Gwalior, India</div>
           </div>
           <div className="w-full md:w-1/6">
             <div className="text-xl">Useful Links</div>
@@ -26,11 +26,11 @@ function Footer() {
           <div className="w-full md:w-1/3">
             <div className="text-xl">Have A Question?</div>
             <div className="mt-3">Address: ABV-IIITM Gwalior, Madhya Pradesh</div>
-            <div className="mt-2">Email: reacs2025@iiitm.ac.in</div>
+            <div className="mt-2">Email:*** reacs2025@iiitm.ac.in</div>
           </div>
         </div>
       </div>
-      <div className="text-center text-[12px] bg-[#3E3F40] py-1">© 2025 All Rights Reserved By ReACS-2025.</div>
+      <div className="text-center text-[12px] bg-[#3E3F40] py-1">© 2026 All Rights Reserved By ReACS-2026.</div>
     </div>
   )
 }
