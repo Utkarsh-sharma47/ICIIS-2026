@@ -4,7 +4,7 @@ const RegistrationFees = () => {
       <table className="w-full text-sm text-center border border-gray-300">
         <thead className="text-gray-900">
           <tr className="bg-[#7292D1] text-white">
-            <th colSpan={10} className="text-lg p-2 border border-white">ReACS 2025, ABV-IIITM Gwalior (with GST)</th>
+            <th colSpan={10} className="text-lg p-2 border border-white">ReACS 2026, ABV-IIITM Gwalior (with GST)</th>
           </tr>
           <tr className="bg-[#9CC2D8]">
             <th colSpan={10} className="p-2 border border-white">Indian Delegates (INR)</th>
