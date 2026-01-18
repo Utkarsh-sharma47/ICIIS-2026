@@ -17,7 +17,7 @@ function App() {
     <ScrollToTop/>
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/registration" element={<Registration />} />
+        <Route path="/registration" element={<Registration />} />
         <Route path="/schedule" element={<Schedule />} />
         <Route path="/submission" element={<Submission />} />
         <Route path="/cfp" element={<CFP />} />
@@ -25,7 +25,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/crs" element={<CRS />} />
         <Route path="/speakers" element={<Speakers />} />
-        <Route path="/attende" element={<Attende/>}/> */}
+        <Route path="/attende" element={<Attende/>}/>
       </Routes>
     </BrowserRouter>
   )
