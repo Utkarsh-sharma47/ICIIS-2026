@@ -14,11 +14,17 @@ function HeroSection() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isCallsDropdownOpen, setIsCallsDropdownOpen] = useState(false);
   const [isSubmissionDdOpen, setIsSubmissionDdOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const mainNavItems = [
     { name: "Home", path: "/" },
     { name: "Registration", path: "/registration" },
-    // { name: "Submission", path: "/submission" },
     { name: "Program Schedule", path: "/schedule" },
     { name: "Committee", path: "/committee" },
     { name: "Keynote", path: "/speakers" },
@@ -29,14 +35,14 @@ function HeroSection() {
   ];
 
   const dropdownItems = [
-    {name:"Accommodation", path: "/attende"},
+    { name: "Accommodation", path: "/attende" },
     { name: "About", path: "/about" }
   ];
 
   const submissionDropdownItems = [
     { name: "Second Phase Paper Submission", path: "/submission" },
     { name: "Camera Ready Submission", path: "/crs" },
-  ]
+  ];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -52,218 +58,245 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="inter">
-      <div className="relative">
-        {/* Background Image */}
+    <div className="font-sans antialiased relative w-full overflow-visible bg-slate-900">
+      <style>{`
+        @keyframes fade-in-up {
+          0% { opacity: 0; transform: translateY(20px); }
+          100% { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-up {
+          animation: fade-in-up 0.8s ease-out forwards;
+        }
+        .text-glow {
+          text-shadow: 0 0 30px rgba(56, 189, 248, 0.6);
+        }
+
+        
+        .glass-panel {
+          background: rgba(255, 255, 255, 0.75); 
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          border: 1px solid rgba(255, 255, 255, 0.6);
+          box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-item {
+          transition: all 0.3s ease;
+          color: #1e293b;
+          font-weight: 700;
+        }
+        .nav-item:hover {
+          background: rgba(255, 255, 255, 0.5);
+          transform: translateY(-2px);
+          color: #0284c7;
+        }
+      `}</style>
+
+      <div className="relative h-screen flex flex-col">
+        
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
+            className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
           >
             <img
-              className="w-full h-[400px] sm:h-[400px] md:h-[650px] object-cover"
+              className="w-full h-full object-cover"
               src={slide}
-              alt="library image"
+              alt="Background"
             />
-            <div className="absolute h-[400px] sm:h-[400px] md:h-[650px] inset-0 bg-gradient-to-b from-black/50 to-black/20" />
+            {/* UPDATED: Slate Overlay (Stronger on img1/index 0) */}
+            <div 
+                className={`absolute inset-0 ${
+                    index === 0 ? 'bg-slate-900/50' : 'bg-slate-900/60'
+                }`} 
+            />
           </div>
         ))}
 
-        <div className="md:hidden z-50 absolute right-3 top-3">
+        {/* Mobile Menu Button - White (Light Theme) */}
+        <div className="md:hidden z-50 absolute right-4 top-4">
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="inline-flex items-center justify-center p-2 bg-gray-200/30 rounded-md text-white cursor-pointer focus:outline-none"
+            className="inline-flex items-center justify-center p-2 bg-white/90 backdrop-blur-md rounded-lg text-slate-900 border border-white/50 shadow-lg hover:bg-white transition-all"
           >
-            {isMenuOpen ? <X className="h-8 w-8" /> : <Menu className="h-6 w-6" />}
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
           </button>
         </div>
 
-        {/* Hero Content */}
-        <div className="relative max-w-7xl flex flex-col justify-center text-justify mx-auto pt-14 md:pt-10 lg:pt-12">
-          <div className='flex justify-center lg:mb-4'>
-            <img 
-              src={ReACE_logo} 
-              alt="IIIT Logo" 
-              className="h-auto w-[200px] md:w-[300px] object-contain"
-            />
-          </div>
-          <p className="text-md tracking-wider md:text-xl text-white text-center max-w-4xl mx-auto font-semibold">
-            2026 IEEE International Conference on Recent Advances in Computing and Systems
-          </p>
-          <p className="mt-4 tracking-wider text-sm md:text-lg text-white text-center font-bold">
-            XX-XX December 2026 &#x2022; ABV-IIITM Gwalior, India
-          </p>
-          <p className="mt-4 tracking-wider text-sm md:text-lg text-white text-center font-bold">
-            Conference Successfully Concluded
-          </p>
-
-          {/* Navbar */}
-          <nav className="relative z-10 mt-8">
-            <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="flex items-center justify-center">
-                <div className="hidden md:block bg-[#2769b0]/80 rounded-4xl px-4">
-                  <div className="flex items-baseline space-x-1">
-                    {mainNavItems.map((item) => (
-                      <Link
-                        key={item.name}
-                        to={item.path}
-                        className="px-8 py-2 text-sm font-medium text-white hover:bg-[#2769b0]"
-                      >
-                        {item.name}
-                      </Link>
-                    ))}
-
-                    {/* Submission Dropdown Menu */}
-                    <div 
-                      className="relative"
-                      onMouseEnter={() => setIsSubmissionDdOpen(true)}
-                      onMouseLeave={() => setIsSubmissionDdOpen(false)}
-                    >
-                      <button 
-                        className="px-8 py-2 text-sm font-medium text-white hover:bg-[#2769b0] flex items-center gap-1"
-                      >
-                        Submission <ChevronDown className="h-4 w-4" />
-                      </button>
-                      <div 
-                        className={`absolute left-0 mt-1 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition-all duration-200 ease-in-out ${
-                          isSubmissionDdOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-                        }`}
-                      >
-                        <div className="py-1">
-                          {submissionDropdownItems.map((item) => (
-                            <Link
-                              key={item.name}
-                              to={item.path}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            >
-                              {item.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Calls Dropdown Menu */}
-                    <div 
-                      className="relative"
-                      onMouseEnter={() => setIsCallsDropdownOpen(true)}
-                      onMouseLeave={() => setIsCallsDropdownOpen(false)}
-                    >
-                      <button 
-                        className="px-8 py-2 text-sm font-medium text-white hover:bg-[#2769b0] flex items-center gap-1"
-                      >
-                        Calls <ChevronDown className="h-4 w-4" />
-                      </button>
-                      <div 
-                        className={`absolute left-0 mt-1 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition-all duration-200 ease-in-out ${
-                          isCallsDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-                        }`}
-                      >
-                        <div className="py-1">
-                          {callsDropdownItems.map((item) => (
-                            <Link
-                              key={item.name}
-                              to={item.path}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            >
-                              {item.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* More Dropdown Menu */}
-                    <div 
-                      className="relative"
-                      onMouseEnter={() => setIsDropdownOpen(true)}
-                      onMouseLeave={() => setIsDropdownOpen(false)}
-                    >
-                      <button 
-                        className="px-8 py-2 text-sm font-medium text-white hover:bg-[#2769b0] flex items-center gap-1"
-                      >
-                        More <ChevronDown className="h-4 w-4" />
-                      </button>
-                      <div 
-                        className={`absolute left-0 mt-1 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition-all duration-200 ease-in-out ${
-                          isDropdownOpen ? 'opacity-100 visible' : 'opacity-0 invisible'
-                        }`}
-                      >
-                        <div className="py-1">
-                          {dropdownItems.map((item) => (
-                            <Link
-                              key={item.name}
-                              to={item.path}
-                              className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                            >
-                              {item.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        <div className="relative z-10 flex-grow flex flex-col justify-center items-center px-4 w-full max-w-7xl mx-auto">
+          
+          <div className="animate-fade-in-up flex flex-col items-center w-full">
+            
+            <div className='mb-4 md:mb-6 transition-transform duration-500 hover:scale-105'>
+              <img 
+                src={ReACE_logo} 
+                alt="ReACS Logo" 
+                className="h-20 md:h-28 lg:h-36 w-auto object-contain drop-shadow-2xl"
+              />
             </div>
 
-            {/* Mobile menu */}
-            <div
-              className={`fixed inset-y-0 right-0 transform ${
-                isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-              } w-64 bg-black shadow-lg z-50 text-white overflow-y-auto transition-transform duration-300 ease-in-out md:hidden`}
-            >
-              <div className="p-1">
-                <div className="flex items-center justify-between mt-20 my-6">
-                  <div className="flex items-center">
-                    <div className="pl-4 rounded-lg flex items-center justify-center">
-                      <h1 className="text-3xl font-bold">ReACS 2026</h1>
-                    </div>
-                  </div>
-                </div>
+            <div className="text-center space-y-1 max-w-5xl mx-auto">
+                <h1 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-white tracking-[0.25em] uppercase border-b border-transparent inline-block pb-1 text-glow drop-shadow-md">
+                    2026 IEEE International Conference on
+                </h1>
+                
+                <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight text-glow mt-1">
+                    <span className="bg-clip-text bg-gradient-to-r from-sky-200 via-white to-sky-200">
+                        Recent Advances in <br className="hidden md:block" />
+                        Computing and Systems
+                    </span>
+                </h1>
+            </div>
 
-                <div className="md:flex space-y-2 cursor-pointer font-semibold my-5">
-                  {[...mainNavItems, ...submissionDropdownItems, ...callsDropdownItems, ...dropdownItems].map((item) => (
-                    <Link 
+            <div className="mt-6 flex flex-col items-center space-y-2">
+              <div className="flex items-center space-x-4">
+                <span className="h-[2px] w-8 md:w-12 bg-sky-400"></span>
+                <p className="text-white font-bold tracking-[0.15em] text-sm md:text-xl uppercase shadow-sm">
+                   XX-XX December 2026
+                </p>
+                <span className="h-[2px] w-8 md:w-12 bg-sky-400"></span>
+              </div>
+              <p className="text-slate-100 font-medium tracking-wider text-xs md:text-lg">
+                ABV-IIITM Gwalior, India
+              </p>
+            </div>
+
+            <nav className="mt-8 w-full max-w-5xl hidden md:block">
+              <div className="glass-panel rounded-full px-4 py-2 mx-auto shadow-2xl">
+                <div className="flex items-center justify-between text-sm font-semibold text-white">
+                  {mainNavItems.map((item) => (
+                    <Link
                       key={item.name}
-                      to={item.path} 
-                      className="text-white block pl-4 pb-2 border-gray-800 border-b-1"
+                      to={item.path}
+                      className="px-6 py-3 rounded-full nav-item"
                     >
                       {item.name}
                     </Link>
                   ))}
+
+                  <div 
+                    className="relative group"
+                    onMouseEnter={() => setIsSubmissionDdOpen(true)}
+                    onMouseLeave={() => setIsSubmissionDdOpen(false)}
+                  >
+                    <button className="px-6 py-3 flex items-center gap-1 rounded-full nav-item">
+                      Submission <ChevronDown className="h-4 w-4 opacity-80 group-hover:rotate-180 transition-transform" />
+                    </button>
+                    <div 
+                      className={`absolute left-0 mt-4 w-60 rounded-xl overflow-hidden glass-panel transition-all duration-300 origin-top-left ${
+                        isSubmissionDdOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-2 invisible'
+                      }`}
+                    >
+                      {submissionDropdownItems.map((item) => (
+                        <Link
+                          key={item.name}
+                          to={item.path}
+                          className="block px-6 py-3 text-sm text-slate-800 hover:bg-white/50 hover:text-sky-600 transition-colors border-b border-white/20 last:border-0"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div 
+                    className="relative group"
+                    onMouseEnter={() => setIsCallsDropdownOpen(true)}
+                    onMouseLeave={() => setIsCallsDropdownOpen(false)}
+                  >
+                    <button className="px-6 py-3 flex items-center gap-1 rounded-full nav-item">
+                      Calls <ChevronDown className="h-4 w-4 opacity-80 group-hover:rotate-180 transition-transform" />
+                    </button>
+                    <div 
+                      className={`absolute left-0 mt-4 w-48 rounded-xl overflow-hidden glass-panel transition-all duration-300 origin-top-left ${
+                        isCallsDropdownOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-2 invisible'
+                      }`}
+                    >
+                      {callsDropdownItems.map((item) => (
+                        <Link
+                          key={item.name}
+                          to={item.path}
+                          className="block px-6 py-3 text-sm text-slate-800 hover:bg-white/50 hover:text-sky-600 transition-colors"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div 
+                    className="relative group"
+                    onMouseEnter={() => setIsDropdownOpen(true)}
+                    onMouseLeave={() => setIsDropdownOpen(false)}
+                  >
+                    <button className="px-6 py-3 flex items-center gap-1 rounded-full nav-item">
+                      More <ChevronDown className="h-4 w-4 opacity-80 group-hover:rotate-180 transition-transform" />
+                    </button>
+                    <div 
+                      className={`absolute right-0 mt-4 w-48 rounded-xl overflow-hidden glass-panel transition-all duration-300 origin-top-right ${
+                        isDropdownOpen ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-2 invisible'
+                      }`}
+                    >
+                      {dropdownItems.map((item) => (
+                        <Link
+                          key={item.name}
+                          to={item.path}
+                          className="block px-6 py-3 text-sm text-slate-800 hover:bg-white/50 hover:text-sky-600 transition-colors border-b border-white/20 last:border-0"
+                        >
+                          {item.name}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+
                 </div>
+              </div>
+            </nav>
+
+            <div className="mt-8 md:mt-12 w-full border-t border-white/10 pt-6">
+              <div className="flex flex-wrap justify-center items-center gap-10 md:gap-20 opacity-90 hover:opacity-100 transition-opacity">
+                <img src={ieee_logo} alt="IEEE Logo" className="h-10 md:h-16 lg:h-20 w-auto object-contain" />
+                <img src={iiit_logo} alt="IIIT Logo" className="h-12 md:h-20 lg:h-24 w-auto object-contain" />
+                <img src={ieee} alt="IEEE Society Logo" className="h-10 md:h-16 lg:h-20 w-auto object-contain" />
               </div>
             </div>
 
-            {/* Overlay when mobile menu is open */}
-            {isMenuOpen && (
-              <div
-                className="fixed inset-0 bg-black/40 z-30 md:hidden"
-                onClick={toggleMenu}
-              ></div>
-            )}
-          </nav>
-          <div className="md:mt-10">
-            <div className="flex justify-center items-center px-4">
-              <img 
-                src={ieee_logo} 
-                alt="ReACE Logo" 
-                className="w-[90px] sm:w-[150px] lg:w-[220px] h-auto object-contain"
-              />
-              <img 
-                src={iiit_logo} 
-                alt="IEEE Logo" 
-                className="w-[90px] sm:w-[150px] lg:w-[220px] h-auto object-contain"
-              />
-              <img 
-                src={ieee} 
-                alt="IIIT Logo" 
-                className="w-[90px] sm:w-[150px] lg:w-[220px] h-auto object-contain"
-              />
+          </div>
+        </div>
+
+        {/* Mobile Sidebar - White Glassy Theme */}
+        <div
+          className={`fixed inset-y-0 right-0 w-[80%] max-w-sm bg-white/90 backdrop-blur-xl shadow-2xl z-50 transform transition-transform duration-300 ease-in-out md:hidden border-l border-white/20 ${
+            isMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}
+        >
+          <div className="flex flex-col h-full overflow-y-auto">
+            <div className="p-6 border-b border-slate-200">
+              <h2 className="text-2xl font-bold text-slate-900 tracking-wider">ReACS 2026</h2>
+              <p className="text-xs text-slate-500 mt-1 uppercase tracking-widest">Navigation</p>
+            </div>
+            
+            <div className="px-4 py-6 space-y-1">
+              {[...mainNavItems, ...submissionDropdownItems, ...callsDropdownItems, ...dropdownItems].map((item) => (
+                <Link 
+                  key={item.name}
+                  to={item.path} 
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block px-4 py-3 text-slate-700 hover:text-sky-600 hover:bg-sky-50 rounded-lg transition-colors font-medium border-l-2 border-transparent hover:border-sky-500"
+                >
+                  {item.name}
+                </Link>
+              ))}
             </div>
           </div>
         </div>
+
+        {isMenuOpen && (
+          <div
+            className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden transition-opacity"
+            onClick={toggleMenu}
+          ></div>
+        )}
       </div>
     </div>
   );
