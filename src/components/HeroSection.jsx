@@ -92,7 +92,7 @@ function HeroSection() {
         }
       `}</style>
 
-      <div className="relative h-screen flex flex-col">
+      <div className="relative min-h-screen flex flex-col">
         
         {slides.map((slide, index) => (
           <div
@@ -104,7 +104,7 @@ function HeroSection() {
               src={slide}
               alt="Background"
             />
-            {/* UPDATED: Slate Overlay (Stronger on img1/index 0) */}
+            
             <div 
                 className={`absolute inset-0 ${
                     index === 0 ? 'bg-slate-900/50' : 'bg-slate-900/60'
