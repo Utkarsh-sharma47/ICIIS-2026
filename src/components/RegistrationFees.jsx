@@ -1,88 +1,73 @@
+import React from 'react';
+
 const RegistrationFees = () => {
   return (
-    <div className="inter overflow-x-auto py-1">
-      <table className="w-full text-sm text-center border border-gray-300">
-        <thead className="text-gray-900">
-          <tr className="bg-[#7292D1] text-white">
-            <th colSpan={10} className="text-lg p-2 border border-white">ReACS 2026, ABV-IIITM Gwalior (with GST)</th>
-          </tr>
-          <tr className="bg-[#9CC2D8]">
-            <th colSpan={10} className="p-2 border border-white">Indian Delegates (INR)</th>
-          </tr>
-          <tr className="bg-[#7BCFB3]">
-            <th className="p-2 border border-white">Category</th>
-            <th colSpan={4} className="border border-white">Early Bird Registration</th>
-            <th colSpan={4} className="border border-white">Registration</th>
-          </tr>
-          <tr className="bg-[#94E4CC]">
-            <th className="p-2 border border-white bg-[#7BCFB3]"></th>
-            <th colSpan={2} className="p-2 border border-white">Academia/Professionals</th>
-            <th colSpan={2} className="p-2 border border-white">Students (10% Deduction)</th>
-            <th colSpan={2} className="p-2 border border-white">Academia/Professionals</th>
-            <th colSpan={2} className="p-2 border border-white">Students (10% Deduction)</th>
-          </tr>
-          <tr className="bg-[#94E4CC]">
-            <th className="p-2 border border-white bg-[#7BCFB3]"></th>
-            <th className="p-2 border border-white">IEEE</th>
-            <th className="p-2 border border-white">Non IEEE</th>
-            <th className="p-2 border border-white">IEEE</th>
-            <th className="p-2 border border-white">Non IEEE</th>
-            <th className="p-2 border border-white">IEEE</th>
-            <th className="p-2 border border-white">Non IEEE</th>
-            <th className="p-2 border border-white">IEEE</th>
-            <th className="p-2 border border-white">Non IEEE</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="bg-[#C3D6D0]">
-            <td className="p-2 border border-white bg-[#7BCFB3] font-semibold">Presenter</td>
-            <td className="p-2 border border-white">7080</td>
-            <td className="p-2 border border-white">8260</td>
-            <td className="p-2 border border-white">6372</td>
-            <td className="p-2 border border-white">7434</td>
-            <td className="p-2 border border-white">8260</td>
-            <td className="p-2 border border-white">9440</td>
-            <td className="p-2 border border-white">7434</td>
-            <td className="p-2 border border-white">8496</td>
-          </tr>
-          <tr className="bg-[#C3D6D0]">
-            <td className="p-2 border border-white bg-[#7BCFB3] font-semibold">Listener</td>
-            <td className="p-2 border border-white">2950</td>
-            <td className="p-2 border border-white">4130</td>
-            <td className="p-2 border border-white">2655</td>
-            <td className="p-2 border border-white">3717</td>
-            <td className="p-2 border border-white">4130</td>
-            <td className="p-2 border border-white">5310</td>
-            <td className="p-2 border border-white">3717</td>
-            <td className="p-2 border border-white">4779</td>
-          </tr>
-          <tr className="bg-[#9CC2D8]">
-            <th colSpan={10} className="p-2 border border-white">Foreign Delegates (US $)</th>
-          </tr>
-          <tr className="bg-[#C3D6D0]">
-            <td className="p-2 border border-white bg-[#7BCFB3] font-semibold">Presenter</td>
-            <td className="p-2 border border-white" colSpan={1}>236</td>
-            <td className="p-2 border border-white" colSpan={1}>295</td>
-            <td className="p-2 border border-white" colSpan={1}>177</td>
-            <td className="p-2 border border-white" colSpan={1}>206.5</td>
-            <td className="p-2 border border-white" colSpan={1}>295</td>
-            <td className="p-2 border border-white" colSpan={1}>354</td>
-            <td className="p-2 border border-white" colSpan={1}>236</td>
-            <td className="p-2 border border-white" colSpan={1}>295</td>
-          </tr>
-          <tr className="bg-[#C3D6D0]">
-            <td className="p-2 border border-white bg-[#7BCFB3] font-semibold">Listener</td>
-            <td className="p-2 border border-white" colSpan={1}>118</td>
-            <td className="p-2 border border-white" colSpan={1}>177</td>
-            <td className="p-2 border border-white" colSpan={1}>88.5</td>
-            <td className="p-2 border border-white" colSpan={1}>118</td>
-            <td className="p-2 border border-white" colSpan={1}>118</td>
-            <td className="p-2 border border-white" colSpan={1}>177</td>
-            <td className="p-2 border border-white" colSpan={1}>88.5</td>
-            <td className="p-2 border border-white" colSpan={1}>118</td>
-          </tr>
-        </tbody>
-      </table>
+    <div className="font-sans antialiased py-8 px-4 w-full flex justify-center">
+      <div className="w-full max-w-5xl overflow-x-auto shadow-xl rounded-lg bg-white">
+        
+        {/* Header Section */}
+        <div className="bg-[#1e3a8a] text-white text-center py-5 rounded-t-lg">
+          <h2 className="text-2xl md:text-3xl font-bold tracking-wide">Registration Fees Details</h2>
+        </div>
+
+        <table className="w-full text-sm md:text-base text-center border-collapse">
+          <thead>
+            {/* Column Headers */}
+            <tr className="bg-slate-50 text-slate-800 font-bold uppercase tracking-wider text-xs md:text-sm border-b-2 border-slate-200">
+              <th className="p-5 w-1/3">Category</th>
+              <th className="p-5 w-1/3 border-l border-slate-200">Early Bird</th>
+              <th className="p-5 w-1/3 border-l border-slate-200">Regular</th>
+            </tr>
+          </thead>
+          
+          <tbody className="text-gray-700 font-medium">
+            {/* Row 1: IEEE Member */}
+            <tr className="hover:bg-blue-50 transition-colors border-b border-gray-100">
+              <td className="p-5 text-left pl-8 font-bold text-slate-800">
+                IEEE Member
+              </td>
+              <td className="p-5 border-l border-gray-100">₹ 1,200</td>
+              <td className="p-5 border-l border-gray-100">₹ 1,500</td>
+            </tr>
+
+            {/* Row 2: Non-Member */}
+            <tr className="hover:bg-blue-50 transition-colors border-b border-gray-100">
+              <td className="p-5 text-left pl-8 font-bold text-slate-800">
+                Non-Member
+              </td>
+              <td className="p-5 border-l border-gray-100">₹ 1,500</td>
+              <td className="p-5 border-l border-gray-100">₹ 1,800</td>
+            </tr>
+
+            {/* Row 3: Student (IEEE) */}
+            <tr className="hover:bg-blue-50 transition-colors border-b border-gray-100">
+              <td className="p-5 text-left pl-8 font-bold text-slate-800">
+                Student (IEEE)
+              </td>
+              <td className="p-5 border-l border-gray-100">₹ 600</td>
+              <td className="p-5 border-l border-gray-100">₹ 800</td>
+            </tr>
+
+            {/* Row 4: Student (Non-IEEE) */}
+            <tr className="hover:bg-blue-50 transition-colors border-b border-gray-100">
+              <td className="p-5 text-left pl-8 font-bold text-slate-800">
+                Student (Non-IEEE)
+              </td>
+              <td className="p-5 border-l border-gray-100">₹ 800</td>
+              <td className="p-5 border-l border-gray-100">₹ 1,000</td>
+            </tr>
+
+            {/* Row 5: Industry Delegate */}
+            <tr className="hover:bg-blue-50 transition-colors border-b border-gray-100">
+              <td className="p-5 text-left pl-8 font-bold text-slate-800">
+                Industry Delegate
+              </td>
+              <td className="p-5 border-l border-gray-100">₹ 1,800</td>
+              <td className="p-5 border-l border-gray-100">₹ 2,000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

@@ -128,22 +128,22 @@ function HeroSection() {
           <div className="animate-fade-in-up flex flex-col items-center w-full">
             
             <div className='mb-4 md:mb-6 transition-transform duration-500 hover:scale-105'>
-              <img 
+              {/* <img 
                 src={ReACE_logo} 
                 alt="ReACS Logo" 
                 className="h-20 md:h-28 lg:h-36 w-auto object-contain drop-shadow-2xl"
-              />
+              /> */}
             </div>
 
             <div className="text-center space-y-1 max-w-5xl mx-auto">
                 <h1 className="text-xl md:text-2xl lg:text-3xl font-extrabold text-white tracking-[0.25em] uppercase border-b border-transparent inline-block pb-1 text-glow drop-shadow-md">
-                    2026 IEEE International Conference on
+                    2026 IEEE 20th International Conference on
                 </h1>
                 
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight tracking-tight text-glow mt-1">
                     <span className="bg-clip-text bg-gradient-to-r from-sky-200 via-white to-sky-200">
-                        Recent Advances in <br className="hidden md:block" />
-                        Computing and Systems
+                        Industrial and <br className="hidden md:block" />
+                        Information Systems
                     </span>
                 </h1>
             </div>
