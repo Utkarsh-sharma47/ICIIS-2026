@@ -145,7 +145,7 @@ function HeroSection() {
                   // 1. First value is the border/glow thickness
                   // 2. Replace '#ff0000' with your chosen color
                   textShadow:
-                    "0 0 5px rgb(193, 188, 255), 0 0 5px rgb(237, 255, 254), 0 0 10px rgb(127, 204, 251)",
+                    "0 0 0px rgb(193, 188, 255), 0 0 2px rgb(237, 255, 254), 0 0 3px rgb(127, 204, 251)",
                 }}
               >
                 International Conference on <br />
