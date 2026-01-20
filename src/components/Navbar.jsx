@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
-import ReACE_logo from "./../assets/ReACS logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -47,41 +46,58 @@ const Navbar = () => {
     setIsMobileSubmissionOpen(false);
   }, [pathname]);
 
-  // Helper for consistent link styling
+  // Desktop Link Styles
   const navLinkClasses = ({ isActive }) =>
-    `px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+    `px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 tracking-wide ${
       isActive 
-        ? "bg-white/10 text-white shadow-sm" 
-        : "text-gray-200 hover:bg-white/10 hover:text-white"
+        ? "text-blue-400 bg-blue-900/30 shadow-[0_0_10px_rgba(59,130,246,0.1)] border border-blue-500/20" 
+        : "text-slate-300 hover:text-white hover:bg-white/5"
     }`;
 
+  // Desktop Dropdown Button Styles
+  const dropdownBtnClasses = (isOpen) =>
+    `px-3 py-2 rounded-md text-sm font-medium inline-flex items-center gap-1.5 transition-all duration-300 tracking-wide ${
+      isOpen 
+        ? "text-blue-400 bg-blue-900/30" 
+        : "text-slate-300 hover:text-white hover:bg-white/5"
+    }`;
+
+  // Desktop Dropdown Item Styles
   const dropdownItemClasses = ({ isActive }) =>
-    `block px-4 py-2 text-sm transition-colors duration-150 ${
+    `block px-4 py-2.5 text-sm transition-colors duration-200 border-l-2 ${
       isActive 
-        ? "bg-blue-50 text-[#043A75] font-semibold" 
-        : "text-gray-700 hover:bg-gray-50 hover:text-[#043A75]"
+        ? "bg-blue-900/20 border-blue-500 text-blue-100" 
+        : "border-transparent text-slate-400 hover:bg-white/5 hover:text-white hover:border-slate-500"
     }`;
 
   return (
-    // Removed any potential marquee containers, just a solid professional sticky header
-    <nav className="sticky top-0 z-50 w-full bg-[#043A75] shadow-md font-sans border-b border-blue-800">
+    <nav className="sticky top-0 z-50 w-full bg-[#0b2144] backdrop-blur-md shadow-lg font-sans border-b border-slate-700/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           
-          {/* Logo Section */}
-          <div className="flex-shrink-0 flex items-center">
-            {/* <Link to="/" className="flex items-center gap-2 group">
-              <div className="bg-white/5 p-1 rounded-lg group-hover:bg-white/10 transition-colors">
+          {/* --- LOGO SECTION (Visible on Mobile & Desktop) --- */}
+          <div className="flex-shrink-0 flex items-center gap-4">
+            <Link to="/" className="flex items-center gap-3 group">
+              {/* College Logo with Glow Effect */}
+              <div className="relative">
+                <div className="absolute inset-0 bg-blue-500 blur-xl opacity-20 rounded-full group-hover:opacity-30 transition-opacity"></div>
                 <img 
-                  src={ReACE_logo} 
-                  alt="Conference Logo" 
-                  className="h-12 w-auto object-contain"
+                  src="/iiitm.png" 
+                  alt="IIITM Logo" 
+                  className="h-10 md:h-12 w-auto object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
                 />
               </div>
-            </Link> */}
+
+              {/* Conference Name Text */}
+              <div className="flex flex-col">
+                <span className="text-xl md:text-2xl font-bold text-white tracking-tight group-hover:text-shadow-xl transition-colors">
+                  ICIIS 2026
+                </span>
+              </div>
+            </Link>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* --- DESKTOP NAVIGATION (Hidden on Mobile) --- */}
           <div className="hidden lg:flex items-center space-x-1">
             {mainNavItems.map((item) => (
               <NavLink 
@@ -99,12 +115,12 @@ const Navbar = () => {
               onMouseEnter={() => setIsSubmissionDdOpen(true)}
               onMouseLeave={() => setIsSubmissionDdOpen(false)}
             >
-              <button className={`px-3 py-2 rounded-md text-sm font-medium inline-flex items-center gap-1 transition-all duration-200 ${isSubmissionDdOpen ? 'text-white bg-white/10' : 'text-gray-200 hover:text-white hover:bg-white/10'}`}>
+              <button className={dropdownBtnClasses(isSubmissionDdOpen)}>
                 Submission 
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isSubmissionDdOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isSubmissionDdOpen ? 'rotate-180 text-blue-300' : ''}`} />
               </button>
               
-              <div className={`absolute left-0 mt-2 w-64 rounded-lg shadow-xl bg-white ring-1 ring-black ring-opacity-5 transform transition-all duration-200 origin-top-left ${isSubmissionDdOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
+              <div className={`absolute left-0 mt-2 w-64 rounded-xl shadow-2xl bg-[#1e293b] border border-slate-700 ring-1 ring-black ring-opacity-50 transform transition-all duration-200 origin-top-left ${isSubmissionDdOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
                 <div className="py-2">
                   {submissionDropdownItems.map((item) => (
                     <NavLink key={item.path} to={item.path} className={dropdownItemClasses}>
@@ -121,12 +137,12 @@ const Navbar = () => {
               onMouseEnter={() => setIsCallsDropdownOpen(true)}
               onMouseLeave={() => setIsCallsDropdownOpen(false)}
             >
-              <button className={`px-3 py-2 rounded-md text-sm font-medium inline-flex items-center gap-1 transition-all duration-200 ${isCallsDropdownOpen ? 'text-white bg-white/10' : 'text-gray-200 hover:text-white hover:bg-white/10'}`}>
+              <button className={dropdownBtnClasses(isCallsDropdownOpen)}>
                 Calls 
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isCallsDropdownOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isCallsDropdownOpen ? 'rotate-180 text-blue-400' : ''}`} />
               </button>
               
-              <div className={`absolute left-0 mt-2 w-48 rounded-lg shadow-xl bg-white ring-1 ring-black ring-opacity-5 transform transition-all duration-200 origin-top-left ${isCallsDropdownOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
+              <div className={`absolute left-0 mt-2 w-56 rounded-xl shadow-2xl bg-[#1e293b] border border-slate-700 ring-1 ring-black ring-opacity-50 transform transition-all duration-200 origin-top-left ${isCallsDropdownOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
                 <div className="py-2">
                   {callsDropdownItems.map((item) => (
                     <NavLink key={item.path} to={item.path} className={dropdownItemClasses}>
@@ -143,12 +159,12 @@ const Navbar = () => {
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
             >
-              <button className={`px-3 py-2 rounded-md text-sm font-medium inline-flex items-center gap-1 transition-all duration-200 ${isDropdownOpen ? 'text-white bg-white/10' : 'text-gray-200 hover:text-white hover:bg-white/10'}`}>
+              <button className={dropdownBtnClasses(isDropdownOpen)}>
                 More 
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180 text-blue-400' : ''}`} />
               </button>
               
-              <div className={`absolute right-0 mt-2 w-48 rounded-lg shadow-xl bg-white ring-1 ring-black ring-opacity-5 transform transition-all duration-200 origin-top-right ${isDropdownOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
+              <div className={`absolute right-0 mt-2 w-52 rounded-xl shadow-2xl bg-[#1e293b] border border-slate-700 ring-1 ring-black ring-opacity-50 transform transition-all duration-200 origin-top-right ${isDropdownOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
                 <div className="py-2">
                   {dropdownItems.map((item) => (
                     <NavLink key={item.path} to={item.path} className={dropdownItemClasses}>
@@ -160,11 +176,11 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* --- MOBILE MENU BUTTON (Visible only on Mobile) --- */}
           <div className="flex lg:hidden">
             <button
               onClick={toggleMenu}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-200 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white transition-colors"
+              className="inline-flex items-center justify-center p-2 rounded-lg text-slate-300 hover:text-white hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors"
             >
               <span className="sr-only">Open main menu</span>
               {isOpen ? <X className="block h-6 w-6" /> : <Menu className="block h-6 w-6" />}
@@ -173,138 +189,119 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu Overlay */}
-      {isOpen && (
-        <div 
-          className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 lg:hidden"
-          onClick={toggleMenu}
-        />
-      )}
-
-      {/* Mobile Menu Slide-out */}
-      <div
-        className={`fixed inset-y-0 right-0 z-50 w-[280px] bg-[#043A75] shadow-2xl transform transition-transform duration-300 ease-in-out lg:hidden border-l border-white/10 ${
-          isOpen ? 'translate-x-0' : 'translate-x-full'
+      {/* --- MOBILE MENU DROPDOWN (Clean Vertical List) --- */}
+      {/* This renders directly below the navbar when open */}
+      <div 
+        className={`lg:hidden bg-[#0f172a] border-t border-slate-800 shadow-2xl overflow-hidden transition-all duration-300 ease-in-out ${
+          isOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="flex flex-col h-full overflow-y-auto">
-          {/* Mobile Header */}
-          <div className="flex items-center justify-between px-4 pt-5 pb-6 border-b border-white/10">
-            <img 
-              src={ReACE_logo} 
-              alt="Logo" 
-              className="h-10 w-auto object-contain brightness-0 invert"
-            />
-            <button 
-              onClick={toggleMenu}
-              className="text-gray-300 hover:text-white bg-white/5 hover:bg-white/10 p-2 rounded-md transition-colors"
+        <div className="px-4 pt-2 pb-6 space-y-1">
+          {/* Standard Links */}
+          {mainNavItems.map((item) => (
+            <NavLink 
+              key={item.path}
+              to={item.path} 
+              className={({ isActive }) =>
+                `block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 border-l-2 ${
+                  isActive 
+                    ? "border-blue-500 bg-blue-900/20 text-blue-400" 
+                    : "border-transparent text-slate-300 hover:bg-white/5 hover:text-white"
+                }`
+              }
             >
-              <X className="h-6 w-6" />
+              {item.name}
+            </NavLink>
+          ))}
+
+          {/* Mobile Submission Accordion */}
+          <div className="space-y-1 pt-2">
+            <button
+              onClick={() => setIsMobileSubmissionOpen(!isMobileSubmissionOpen)}
+              className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors"
+            >
+              <span>Submission</span>
+              <ChevronDown className={`h-5 w-5 transform transition-transform duration-200 ${isMobileSubmissionOpen ? 'rotate-180 text-blue-400' : 'text-slate-500'}`} />
             </button>
+            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileSubmissionOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className="bg-black/20 rounded-lg py-2 mx-2 border border-white/5">
+                {submissionDropdownItems.map((item) => (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    className={({ isActive }) =>
+                      `block pl-5 pr-4 py-2.5 text-sm font-medium border-l-2 ml-3 ${
+                        isActive 
+                          ? "border-blue-500 text-blue-400 bg-white/5" 
+                          : "border-transparent text-slate-400 hover:text-white"
+                      }`
+                    }
+                  >
+                    {item.name}
+                  </NavLink>
+                ))}
+              </div>
+            </div>
           </div>
 
-          {/* Mobile Links */}
-          <div className="px-2 py-4 space-y-1">
-            {mainNavItems.map((item) => (
-              <NavLink 
-                key={item.path}
-                to={item.path} 
-                className={({ isActive }) =>
-                  `block px-4 py-3 rounded-md text-base font-medium border-l-4 transition-all ${
-                    isActive 
-                      ? "border-white bg-white/10 text-white" 
-                      : "border-transparent text-gray-300 hover:bg-white/5 hover:text-white"
-                  }`
-                }
-              >
-                {item.name}
-              </NavLink>
-            ))}
-
-            {/* Mobile Submission Accordion */}
-            <div className="space-y-1">
-              <button
-                onClick={() => setIsMobileSubmissionOpen(!isMobileSubmissionOpen)}
-                className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white rounded-md transition-colors"
-              >
-                <span>Submission</span>
-                <ChevronDown className={`h-5 w-5 transform transition-transform duration-200 ${isMobileSubmissionOpen ? 'rotate-180' : ''}`} />
-              </button>
-              <div className={`overflow-hidden transition-all duration-300 ${isMobileSubmissionOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
-                <div className="bg-black/20 rounded-md py-1 mx-2">
-                  {submissionDropdownItems.map((item) => (
-                    <NavLink
-                      key={item.path}
-                      to={item.path}
-                      className={({ isActive }) =>
-                        `block pl-8 pr-4 py-2 text-sm font-medium ${
-                          isActive ? "text-white bg-white/5" : "text-gray-400 hover:text-white"
-                        }`
-                      }
-                    >
-                      {item.name}
-                    </NavLink>
-                  ))}
-                </div>
+          {/* Mobile Calls Accordion */}
+          <div className="space-y-1">
+            <button
+              onClick={() => setIsMobileCallsOpen(!isMobileCallsOpen)}
+              className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors"
+            >
+              <span>Calls</span>
+              <ChevronDown className={`h-5 w-5 transform transition-transform duration-200 ${isMobileCallsOpen ? 'rotate-180 text-blue-400' : 'text-slate-500'}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileCallsOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className="bg-black/20 rounded-lg py-2 mx-2 border border-white/5">
+                {callsDropdownItems.map((item) => (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    className={({ isActive }) =>
+                      `block pl-5 pr-4 py-2.5 text-sm font-medium border-l-2 ml-3 ${
+                        isActive 
+                          ? "border-blue-500 text-blue-400 bg-white/5" 
+                          : "border-transparent text-slate-400 hover:text-white"
+                      }`
+                    }
+                  >
+                    {item.name}
+                  </NavLink>
+                ))}
               </div>
             </div>
+          </div>
 
-            {/* Mobile Calls Accordion */}
-            <div className="space-y-1">
-              <button
-                onClick={() => setIsMobileCallsOpen(!isMobileCallsOpen)}
-                className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white rounded-md transition-colors"
-              >
-                <span>Calls</span>
-                <ChevronDown className={`h-5 w-5 transform transition-transform duration-200 ${isMobileCallsOpen ? 'rotate-180' : ''}`} />
-              </button>
-              <div className={`overflow-hidden transition-all duration-300 ${isMobileCallsOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                <div className="bg-black/20 rounded-md py-1 mx-2">
-                  {callsDropdownItems.map((item) => (
-                    <NavLink
-                      key={item.path}
-                      to={item.path}
-                      className={({ isActive }) =>
-                        `block pl-8 pr-4 py-2 text-sm font-medium ${
-                          isActive ? "text-white bg-white/5" : "text-gray-400 hover:text-white"
-                        }`
-                      }
-                    >
-                      {item.name}
-                    </NavLink>
-                  ))}
-                </div>
+          {/* Mobile More Accordion */}
+          <div className="space-y-1">
+            <button
+              onClick={() => setIsMobileMoreOpen(!isMobileMoreOpen)}
+              className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors"
+            >
+              <span>More</span>
+              <ChevronDown className={`h-5 w-5 transform transition-transform duration-200 ${isMobileMoreOpen ? 'rotate-180 text-blue-400' : 'text-slate-500'}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileMoreOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className="bg-black/20 rounded-lg py-2 mx-2 border border-white/5">
+                {dropdownItems.map((item) => (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    className={({ isActive }) =>
+                      `block pl-5 pr-4 py-2.5 text-sm font-medium border-l-2 ml-3 ${
+                        isActive 
+                          ? "border-blue-500 text-blue-400 bg-white/5" 
+                          : "border-transparent text-slate-400 hover:text-white"
+                      }`
+                    }
+                  >
+                    {item.name}
+                  </NavLink>
+                ))}
               </div>
             </div>
-
-            {/* Mobile More Accordion */}
-            <div className="space-y-1">
-              <button
-                onClick={() => setIsMobileMoreOpen(!isMobileMoreOpen)}
-                className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-gray-300 hover:bg-white/5 hover:text-white rounded-md transition-colors"
-              >
-                <span>More</span>
-                <ChevronDown className={`h-5 w-5 transform transition-transform duration-200 ${isMobileMoreOpen ? 'rotate-180' : ''}`} />
-              </button>
-              <div className={`overflow-hidden transition-all duration-300 ${isMobileMoreOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-                <div className="bg-black/20 rounded-md py-1 mx-2">
-                  {dropdownItems.map((item) => (
-                    <NavLink
-                      key={item.path}
-                      to={item.path}
-                      className={({ isActive }) =>
-                        `block pl-8 pr-4 py-2 text-sm font-medium ${
-                          isActive ? "text-white bg-white/5" : "text-gray-400 hover:text-white"
-                        }`
-                      }
-                    >
-                      {item.name}
-                    </NavLink>
-                  ))}
-                </div>
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
