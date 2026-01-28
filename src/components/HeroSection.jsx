@@ -297,7 +297,7 @@ function HeroSection() {
           <div className="flex flex-col h-full overflow-y-auto">
             <div className="p-6 border-b border-slate-200">
               <h2 className="text-2xl font-bold text-slate-900 tracking-wider">
-                ReACS 2026
+                ICIIS 2026
               </h2>
               <p className="text-xs text-slate-500 mt-1 uppercase tracking-widest">
                 Navigation
