@@ -24,10 +24,10 @@ const committeeData = [
     title: "Finance Committee",
     members: [
       { 
-        src: "", // No photo provided
-        name: "Dr. Rahul Kumar", 
+        src: "https://www.iiitm.ac.in/images/demo/teachers/1689745249_photo2.jpg", 
+        name: "Dr. Rahul Kala", 
         dsgn: "ABV-IIITM, India",
-        link: "" // No link provided
+        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Rahul" 
       },
       { 
         src: "https://www.iiitm.ac.in/images/demo/teachers/1533544986_godfrey_pic.jpg", 
