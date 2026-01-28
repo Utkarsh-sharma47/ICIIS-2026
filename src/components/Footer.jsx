@@ -111,7 +111,7 @@ function Footer() {
                 <div>
                   <span className="block text-blue-200 text-xs font-bold uppercase mb-0.5">Email</span>
                   <a href="mailto:contact@iiitm.ac.in" className="text-slate-300 hover:text-white hover:underline decoration-blue-400 underline-offset-2 transition-all">
-                    *****@iiitm.ac.in
+                    iciis2026@iiitm.ac.in
                   </a>
                 </div>
               </div>

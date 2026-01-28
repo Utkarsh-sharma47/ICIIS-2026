@@ -6,7 +6,7 @@ const committeeData = [
     members: [
       { src: "https://www.iiitm.ac.in/images/demo/teachers/1533545473_dranuraj.jpg", name: "Dr. Anuraj Singh", dsgn: "ABV-IIITM, India" },
       { src: "https://www.iiitm.ac.in/images/Photo.jpg", name: "Dr. Vinod Kumar Jain", dsgn: "ABV-IIITM, India" },
-      { src: "https://www.iiitm.ac.in/images/demo/teachers/1690365152_Manojsir.png", name: "Dr. Manoj Singh Parihar", dsgn: "ABV-IIITM, India" },
+      { src: "https://www.iiitm.ac.in/images/IMG_20191213_010559.jpg", name: "Dr. Manoj Singh Parihar", dsgn: "ABV-IIITM, India" },
       { src: "https://www.iiitm.ac.in/images/demo/teachers/1533546077_drsaumya.jpg", name: "Dr. Saumya Bhadauria", dsgn: "ABV-IIITM, India" },
       { src: "https://www.iiitm.ac.in/images/demo/teachers/1677819537_SNK.png", name: "Dr. Sunil Kumar", dsgn: "ABV-IIITM, India" }
     ]
@@ -16,7 +16,7 @@ const committeeData = [
     members: [
       { src: "https://www.iiitm.ac.in/images/demo/teachers/1533546946_kaushalg.jpg", name: "Dr. Gaurav Kaushal", dsgn: "ABV-IIITM, India" },
       { src: "https://www.iiitm.ac.in/images/demo/teachers/1677492702_PIC_Mahendra%20K.%20Shukla.jpg", name: "Dr. Mahendra Shukla", dsgn: "ABV-IIITM, India" },
-      { src: "https://www.iiitm.ac.in/images/demo/teachers/1690365448_Viveksir.png", name: "Dr. Vivek Kumar Singh", dsgn: "ABV-IIITM, India" }
+      { src: "https://www.iiitm.ac.in/images/demo/teachers/1753786677_VKS.png", name: "Dr. Vivek Kumar Singh", dsgn: "ABV-IIITM, India" }
     ]
   },
   {
@@ -31,7 +31,7 @@ const committeeData = [
     title: "Registration Committee",
     members: [
       { src: "https://www.iiitm.ac.in/images/demo/teachers/1761456376_formal_photo1.PNG", name: "Dr. Rohit Kumar", dsgn: "ABV-IIITM, India" },
-      { src: "https://www.iiitm.ac.in/images/demo/teachers/1717651111_Bhanu.jpg", name: "Dr. Bhanu Chander", dsgn: "ABV-IIITM, India" }
+      { src: "https://www.iiitm.ac.in/images/demo/teachers/1753878346_Dr.%20Bahnu%20Profile%20Pic%20for%20Faculty.jpeg", name: "Dr. Bhanu Chander", dsgn: "ABV-IIITM, India" }
     ]
   },
   {
