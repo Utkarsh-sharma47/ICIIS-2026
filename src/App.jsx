@@ -24,7 +24,7 @@ function App() {
         <Route path="/committee" element={<Committee />} />
         <Route path="/about" element={<About />} />
         <Route path="/crs" element={<CRS />} />
-        <Route path="/speakers" element={<Speakers />} />
+        {/* <Route path="/speakers" element={<Speakers />} /> */}
         <Route path="/attende" element={<Attende/>}/>
       </Routes>
     </BrowserRouter>

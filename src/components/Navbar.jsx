@@ -20,24 +20,27 @@ const Navbar = () => {
   const mainNavItems = [
     { name: "Home", path: "/" },
     { name: "Registration", path: "/registration" },
-    { name: "Program Schedule", path: "/schedule" },
+    // { name: "Program Schedule", path: "/schedule" },
     { name: "Committee", path: "/committee" },
-    { name: "Keynote", path: "/speakers" },
-  ];
-
-  const callsDropdownItems = [
     { name: "Call for Papers", path: "/cfp" },
-  ];
-
-  const dropdownItems = [
+    { name: "Paper Submission", path: "/submission" },
+    // { name: "Keynote", path: "/speakers" },
     { name: "About", path: "/about" },
-    { name: "Accommodation", path: "/attende" }
   ];
 
-  const submissionDropdownItems = [
-    { name: "Second Phase Paper Submission", path: "/submission" },
-    { name: "Camera Ready Submission", path: "/crs" },
-  ];
+  // const callsDropdownItems = [
+  //   { name: "Call for Papers", path: "/cfp" },
+  // ];
+
+  // const dropdownItems = [
+  //   { name: "About", path: "/about" },
+  //   { name: "Accommodation", path: "/attende" }
+  // ];
+
+  // const submissionDropdownItems = [
+  //   { name: "Paper Submission", path: "/submission" },
+    // { name: "Camera Ready Submission", path: "/crs" },
+  // ];
 
   useEffect(() => {
     setIsOpen(false);
@@ -110,7 +113,7 @@ const Navbar = () => {
             ))}
 
             {/* Submission Dropdown */}
-            <div 
+            {/* <div 
               className="relative group"
               onMouseEnter={() => setIsSubmissionDdOpen(true)}
               onMouseLeave={() => setIsSubmissionDdOpen(false)}
@@ -129,10 +132,10 @@ const Navbar = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Calls Dropdown */}
-            <div 
+            {/* <div 
               className="relative group"
               onMouseEnter={() => setIsCallsDropdownOpen(true)}
               onMouseLeave={() => setIsCallsDropdownOpen(false)}
@@ -151,10 +154,10 @@ const Navbar = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* More Dropdown */}
-            <div 
+            {/* <div 
               className="relative group"
               onMouseEnter={() => setIsDropdownOpen(true)}
               onMouseLeave={() => setIsDropdownOpen(false)}
@@ -173,7 +176,7 @@ const Navbar = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* --- MOBILE MENU BUTTON (Visible only on Mobile) --- */}
@@ -215,7 +218,7 @@ const Navbar = () => {
           ))}
 
           {/* Mobile Submission Accordion */}
-          <div className="space-y-1 pt-2">
+          {/* <div className="space-y-1 pt-2">
             <button
               onClick={() => setIsMobileSubmissionOpen(!isMobileSubmissionOpen)}
               className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors"
@@ -242,10 +245,10 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Mobile Calls Accordion */}
-          <div className="space-y-1">
+          {/* <div className="space-y-1">
             <button
               onClick={() => setIsMobileCallsOpen(!isMobileCallsOpen)}
               className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors"
@@ -272,10 +275,10 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Mobile More Accordion */}
-          <div className="space-y-1">
+          {/* <div className="space-y-1">
             <button
               onClick={() => setIsMobileMoreOpen(!isMobileMoreOpen)}
               className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors"
@@ -302,7 +305,7 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </nav>

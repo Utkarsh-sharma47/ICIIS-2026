@@ -1,113 +1,136 @@
-import { Footer, Navbar, RegistrationFees } from "../components/index.js"
-import qr from "../assets/qr.png"
+import { Footer, Navbar } from "../components/index.js"
+import { Calendar, AlertCircle, Mail, ArrowRight } from 'lucide-react';
+
 function Registration() {
   return (
-    <>
-      {/* <Header/> */}
+    <div className="bg-white min-h-screen font-sans text-slate-800 flex flex-col">
       <Navbar />
-      <div className="inter py-4 px-4 md:px-12 sm:py-4 md:py-6 max-w-[1280px] mx-auto">
-        <div className="pb-5">
-          <div className="text-2xl font-semibold">Important Dates (third-phase)</div>
-          <ul className="mt-2 ml-5 list-disc space-y-2 text-base">
-            <li><span className="font-semibold">Deadline for Early Bird Registration:</span> 10 October 2025</li>
-            <li><span className="font-semibold">Deadline for Camera-Ready Submission:</span> 20 October 2025</li>
-            <li><span className="font-semibold">All Registration Deadlines Close On:</span> 20 October 2025</li>
-          </ul>
+      
+      {/* Main Content Container - Added top padding for spacing from Navbar */}
+      <div className="flex-grow py-12 px-4 md:px-8 max-w-6xl mx-auto space-y-12 w-full">
+        
+        {/* Section 1: Important Dates - Clean List */}
+        <div className="border-b border-slate-200 pb-10">
+            <div className="flex items-center gap-3 mb-6">
+                <Calendar className="w-6 h-6 text-blue-700" />
+                <h2 className="text-2xl font-bold text-[#0f172a]">Important Dates</h2>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {[
+                    { label: "Paper Submission Open", date: "01 March, 2026" },
+                    { label: "Submission Deadline", date: "30 April, 2026" },
+                    { label: "Acceptance Notification", date: "30 June, 2026" },
+                    { label: "Camera Ready Submission", date: "15 July, 2026" }
+                ].map((item, index) => (
+                    <div key={index} className="border-l-2 border-blue-100 pl-4 py-1 hover:border-blue-500 transition-colors duration-300">
+                        <p className="text-sm text-slate-500 font-medium uppercase tracking-wide">{item.label}</p>
+                        <p className="text-lg font-bold text-blue-900 mt-1">{item.date}</p>
+                    </div>
+                ))}
+            </div>
         </div>
-        <div className="pb-5">
-          <div className="text-2xl font-semibold">Registration Guidelines</div>
-          <ul className="mt-2 ml-5 list-disc space-y-2 text-base">
-            <li>Every accepted paper must have at least one author registration.</li>
-            <li>Papers exceeding 6 pages are subject to an extra page charge of INR 1180
-              (inclusive of 18% GST) per additional page, up to a maximum of 8 pages.</li>
-            <li>Authors who do not comply fully with conference requirements (viz. Registration,
-              camera ready format, in-person presentation of the accepted paper etc.) may not
-              have their paper published in the conference proceedings.</li>
-            <li>Attendees without a paper may register at Listener rates.</li>
-            <li>Conference registration includes the Banquet Dinner.</li>
-          </ul>
+
+        {/* Section 2: Guidelines & Instructions - Two Column Text */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 border-b border-slate-200 pb-10">
+            
+            {/* Registration Guidelines */}
+            <div className="space-y-4">
+                <h3 className="text-xl font-bold text-[#0f172a] mb-4">Registration Guidelines</h3>
+                <ul className="space-y-4 text-slate-700 leading-relaxed text-sm md:text-base">
+                    <li className="flex gap-3 items-start">
+                        <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></span>
+                        <span>Every accepted paper must have at least one author registration.</span>
+                    </li>
+                    <li className="flex gap-3 items-start">
+                        <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></span>
+                        <span>Papers exceeding 6 pages are subject to an extra page charge of INR 1180 (inclusive of 18% GST) per additional page, up to a maximum of 8 pages.</span>
+                    </li>
+                    <li className="flex gap-3 items-start">
+                        <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></span>
+                        <span>Authors must fully comply with requirements (Registration, Camera Ready Format, Presentation) to be published in proceedings.</span>
+                    </li>
+                    <li className="flex gap-3 items-start">
+                        <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></span>
+                        <span>Attendees without a paper may register at Listener rates.</span>
+                    </li>
+                    <li className="flex gap-3 items-start">
+                        <span className="w-1.5 h-1.5 bg-blue-600 rounded-full mt-2.5 flex-shrink-0"></span>
+                        <span>Conference registration includes the Banquet Dinner.</span>
+                    </li>
+                </ul>
+            </div>
+
+            {/* Submission Instructions */}
+            <div className="space-y-4">
+                <h3 className="text-xl font-bold text-[#0f172a] mb-4">Submission Instructions</h3>
+                <ul className="space-y-4 text-slate-700 leading-relaxed text-sm md:text-base">
+                    <li className="flex gap-3 items-start">
+                        <span className="text-blue-600 font-bold text-xs mt-0.5 border border-blue-200 w-6 h-6 flex items-center justify-center rounded-full flex-shrink-0">1</span>
+                        <span>Please enter your Paper ID in the remarks column while making the payment.</span>
+                    </li>
+                    <li className="flex gap-3 items-start">
+                        <span className="text-blue-600 font-bold text-xs mt-0.5 border border-blue-200 w-6 h-6 flex items-center justify-center rounded-full flex-shrink-0">2</span>
+                        <span>After payment, kindly take a printout or screenshot of your registration receipt.</span>
+                    </li>
+                    <li className="flex gap-3 items-start">
+                        <span className="text-blue-600 font-bold text-xs mt-0.5 border border-blue-200 w-6 h-6 flex items-center justify-center rounded-full flex-shrink-0">3</span>
+                        <span>Once fee is paid, fill out the registration form below and upload your receipt.</span>
+                    </li>
+                    <li className="flex gap-3 items-start">
+                        <span className="text-blue-600 font-bold text-xs mt-0.5 border border-blue-200 w-6 h-6 flex items-center justify-center rounded-full flex-shrink-0">4</span>
+                        <span>First-phase accepted papers must register before the deadline to be included in proceedings.</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div className="pb-5">
-          <div className="text-2xl font-semibold">Submission Instructions</div>
-          <ul className="mt-2 ml-5 list-disc space-y-2 text-base">
-            <li>Please enter your Paper ID in the remarks column while making the payment.</li>
-            <li>After making the payment, kindly take a printout or screenshot of your
-              registration receipt.</li>
-            <li>Once the registration fee is paid, fill out the registration form provided below and
-              upload your receipt.</li>
-            <li>Papers accepted in first-phase of submission must register before the registration
-              deadline of the first phase for consideration to be included in the conference
-              proceedings.</li>
-          </ul>
+
+        {/* Section 3: Terms - Compact & Clean */}
+        <div className="bg-slate-50 p-6 md:p-8 rounded-lg border border-slate-200">
+            <h3 className="text-lg font-bold text-[#0f172a] mb-4 flex items-center gap-2">
+                <AlertCircle className="w-5 h-5 text-slate-500" />
+                Terms & Conditions
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3 text-sm text-slate-600 leading-relaxed">
+                <p>• Papers exceeding 6 pages are subject to extra charges.</p>
+                <p>• Registration fees are <span className="font-semibold text-slate-900">non-refundable</span>.</p>
+                <p>• At least one author must register and present the paper.</p>
+                <p>• Fee includes: Kit, Sessions, Lunch/Snacks, Social Events.</p>
+                <p>• Student authors must upload valid proof of student status.</p>
+                <p>• Accommodation is <strong>not included</strong>.</p>
+                <p>• IEEE members must upload valid membership proof.</p>
+                <p>• The registration fee includes 18% GST.</p>
+            </div>
         </div>
-        <div className="pb-5">
-          <div className="text-2xl font-semibold">Registration Queries</div>
-          <div className="text-base ml-5 mt-2"><p>For any queries regarding registration, kindly contact:</p>
-            <p> Registration team, ReACS 2025</p>
-            <p>📧 Email: reacs2025@iiitm.ac.in</p>
-          </div>
-        </div>
-        <div className="pb-5">
-          <div className="text-2xl font-semibold">Registration Form</div>
-          <div className="text-base ml-5 mt-2"><p>For authors with multiple accepted papers, the registration form must be filled out separately for each paper.</p>
+
+        {/* Action Area - Professional Button */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-4 pb-8">
+            
+            {/* Contact Info */}
+            <div className="flex items-center gap-3 text-sm text-slate-600">
+                <div className="bg-blue-50 p-2 rounded-full">
+                    <Mail className="w-4 h-4 text-blue-700" />
+                </div>
+                <div>
+                    <span className="block font-semibold text-slate-900">Registration Queries?</span>
+                    <a href="mailto:iciis2026@iiitm.ac.in" className="hover:text-blue-600 transition-colors">
+                        iciis2026@iiitm.ac.in
+                    </a>
+                </div>
+            </div>
+
+            {/* Registration Button */}
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdzICBCcQgT-De1oPG2xxlKoc_itvNbwmDSApMbmeT_PuRl7A/viewform"
-              className="flex items-center w-fit gap-2 hover:bg-blue-200 hover:text-blue-800 bg-[#043A75] text-white mt-2 px-6 py-3 rounded-full transition-colors"
+                href="#"
+                className="inline-flex items-center gap-2 bg-[#0f172a] hover:bg-blue-700 text-white text-sm font-medium px-6 py-3 rounded transition-all duration-300 shadow-sm hover:shadow-md"
             >
-              <span className="font-semibold">
-                Register Here
-              </span>
+                Proceed to Registration Form <ArrowRight className="w-4 h-4" />
             </a>
-          </div>
         </div>
-        <div className="pb-5">
-          <div className="text-2xl font-semibold">Terms and Conditions</div>
-          <ol className="mt-2 ml-5 list-decimal space-y-2 text-base">
-            <li>Papers exceeding 6 pages are subject to an extra page charge of INR 1180
-              (inclusive of 18% GST) per additional page, up to a maximum of 8 pages.</li>
-            <li>At least one author of an accepted paper must register and present the paper to be
-              included in the conference proceedings.</li>
-            <li>Student authors must upload valid proof of student status during registration.</li>
-            <li>IEEE members must upload valid membership proof to avail of membership
-              discounts.</li>
-            <li>The registration fee includes 18% GST.</li>
-            <li>Registration fees are non-refundable at any stage.</li>
-            <li>The registration fee includes:</li>
-            <ul className="ml-3 list-disc space-y-2">
-              <li>Conference kit</li>
-              <li>Access to all technical sessions, keynote speeches, and tutorials</li>
-              <li>Lunch, tea/snacks</li>
-              <li>Social events during the conference</li>
-            </ul>
-            <li>Registration fee does not include accommodation. Accommodation details will be
-              shared on the conference website in due course of time.</li>
-          </ol>
-        </div>
-        <div className="text-2xl font-semibold">Registration Fees Details</div>
-        <RegistrationFees />
-        <div className="mt-2 text-base/relaxed">
-          <span className="font-bold">*</span> The registration fee is not refundable.
-        </div>
-        <div className="py-4">
-          <div className="font-semibold">The account details for payment of Registration fees are given as follows:</div>
-          <div className="mt-2 text-base ml-5 space-y-1">
-            <p><span className="font-bold">Account Name: </span>ABVIIITMG IEEE REACS 2025</p>
-            <p><span className="font-bold">Account Number: </span>946210210000051</p>
-            <p><span className="font-bold">Bank Name and Branch: </span>Bank of India, IIITM Campus, Morena Link Road, Gwalior, M.P. -474003</p>
-            <p><span className="font-bold">Account Type: </span>Saving</p>
-            <p><span className="font-bold">MICR Code: </span>474013010</p>
-            <p><span className="font-bold">IFSC Code: </span>BKID0009462</p>
-            <p><span className="font-bold">SWIFT Code: </span>BKIDINBBGWA</p>
-          </div>
-        </div>
-        <div className="py-2">
-          <div className="font-bold">Scan & Pay</div>
-          <img className="ml-5 mt-2 h-80" src={qr} alt="Qr code" />
-        </div>
+
       </div>
       <Footer />
-    </>
+    </div>
   )
 }
 
-export default Registration
+export default Registration;
