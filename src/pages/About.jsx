@@ -40,7 +40,7 @@ function About() {
             <div className="w-full md:w-1/3">
               <div className="text-xl">Have A Question?</div>
               <div className="mt-3"><span className='font-semibold'>Address:</span> ABV-IIITM Gwalior, Madhya Pradesh, India</div>
-              <div className="mt-2"><span className='font-semibold'>Email:</span> reacs2025@iiitm.ac.in</div>
+              <div className="mt-2"><span className='font-semibold'>Email:</span> iciis2026@iiitm.ac.in</div>
             </div>
           </div>
         </div>

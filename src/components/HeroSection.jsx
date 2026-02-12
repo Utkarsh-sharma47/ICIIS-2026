@@ -24,22 +24,25 @@ function HeroSection() {
   const mainNavItems = [
     { name: "Home", path: "/" },
     { name: "Registration", path: "/registration" },
-    { name: "Program Schedule", path: "/schedule" },
+    // { name: "Program Schedule", path: "/schedule" },
     { name: "Committee", path: "/committee" },
-    { name: "Keynote", path: "/speakers" },
+    { name: "Call for Papers", path: "/cfp" },
+    { name: "Paper Submission", path: "/submission" },
+    // { name: "Keynote", path: "/speakers" },
+    { name: "About", path: "/about" }
   ];
 
-  const callsDropdownItems = [{ name: "Call for Papers", path: "/cfp" }];
+  // const callsDropdownItems = [{ name: "Call for Papers", path: "/cfp" }];
 
-  const dropdownItems = [
-    { name: "Accommodation", path: "/attende" },
-    { name: "About", path: "/about" },
-  ];
+  // const dropdownItems = [
+  //   { name: "Accommodation", path: "/attende" },
+  //   { name: "About", path: "/about" },
+  // ];
 
-  const submissionDropdownItems = [
-    { name: "Second Phase Paper Submission", path: "/submission" },
-    { name: "Camera Ready Submission", path: "/crs" },
-  ];
+  // const submissionDropdownItems = [
+  //   { name: "Paper Submission", path: "/submission" },
+    // { name: "Camera Ready Submission", path: "/crs" },
+  // ];
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -102,9 +105,8 @@ function HeroSection() {
             />
 
             <div
-              className={`absolute inset-0 ${
-                index === 0 ? "bg-slate-900/50" : "bg-slate-900/60"
-              }`}
+              className={`absolute inset-0 ${index === 0 ? "bg-slate-900/50" : "bg-slate-900/60"
+                }`}
             />
           </div>
         ))}
@@ -179,7 +181,7 @@ function HeroSection() {
                     </Link>
                   ))}
 
-                  <div
+                  {/* <div
                     className="relative group"
                     onMouseEnter={() => setIsSubmissionDdOpen(true)}
                     onMouseLeave={() => setIsSubmissionDdOpen(false)}
@@ -189,11 +191,10 @@ function HeroSection() {
                       <ChevronDown className="h-4 w-4 opacity-80 group-hover:rotate-180 transition-transform" />
                     </button>
                     <div
-                      className={`absolute left-0 mt-4 w-60 rounded-xl overflow-hidden glass-panel transition-all duration-300 origin-top-left ${
-                        isSubmissionDdOpen
+                      className={`absolute left-0 mt-4 w-60 rounded-xl overflow-hidden glass-panel transition-all duration-300 origin-top-left ${isSubmissionDdOpen
                           ? "opacity-100 translate-y-0 visible"
                           : "opacity-0 translate-y-2 invisible"
-                      }`}
+                        }`}
                     >
                       {submissionDropdownItems.map((item) => (
                         <Link
@@ -205,9 +206,9 @@ function HeroSection() {
                         </Link>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div
+                  {/* <div
                     className="relative group"
                     onMouseEnter={() => setIsCallsDropdownOpen(true)}
                     onMouseLeave={() => setIsCallsDropdownOpen(false)}
@@ -217,11 +218,10 @@ function HeroSection() {
                       <ChevronDown className="h-4 w-4 opacity-80 group-hover:rotate-180 transition-transform" />
                     </button>
                     <div
-                      className={`absolute left-0 mt-4 w-48 rounded-xl overflow-hidden glass-panel transition-all duration-300 origin-top-left ${
-                        isCallsDropdownOpen
+                      className={`absolute left-0 mt-4 w-48 rounded-xl overflow-hidden glass-panel transition-all duration-300 origin-top-left ${isCallsDropdownOpen
                           ? "opacity-100 translate-y-0 visible"
                           : "opacity-0 translate-y-2 invisible"
-                      }`}
+                        }`}
                     >
                       {callsDropdownItems.map((item) => (
                         <Link
@@ -233,9 +233,9 @@ function HeroSection() {
                         </Link>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
 
-                  <div
+                  {/* <div
                     className="relative group"
                     onMouseEnter={() => setIsDropdownOpen(true)}
                     onMouseLeave={() => setIsDropdownOpen(false)}
@@ -261,7 +261,7 @@ function HeroSection() {
                         </Link>
                       ))}
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </nav>
@@ -290,9 +290,8 @@ function HeroSection() {
 
         {/* Mobile Sidebar - White Glassy Theme */}
         <div
-          className={`fixed inset-y-0 right-0 w-[80%] max-w-sm bg-white/90 backdrop-blur-xl shadow-2xl z-50 transform transition-transform duration-300 ease-in-out md:hidden border-l border-white/20 ${
-            isMenuOpen ? "translate-x-0" : "translate-x-full"
-          }`}
+          className={`fixed inset-y-0 right-0 w-[80%] max-w-sm bg-white/90 backdrop-blur-xl shadow-2xl z-50 transform transition-transform duration-300 ease-in-out md:hidden border-l border-white/20 ${isMenuOpen ? "translate-x-0" : "translate-x-full"
+            }`}
         >
           <div className="flex flex-col h-full overflow-y-auto">
             <div className="p-6 border-b border-slate-200">
@@ -307,9 +306,9 @@ function HeroSection() {
             <div className="px-4 py-6 space-y-1">
               {[
                 ...mainNavItems,
-                ...submissionDropdownItems,
-                ...callsDropdownItems,
-                ...dropdownItems,
+                // ...submissionDropdownItems,
+                // ...callsDropdownItems,
+                // ...dropdownItems,
               ].map((item) => (
                 <Link
                   key={item.name}

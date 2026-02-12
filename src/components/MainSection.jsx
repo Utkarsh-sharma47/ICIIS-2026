@@ -27,6 +27,14 @@ function MainSection() {
             heading: "Track 6: FPGA, EDA Tools & VLSI Design",
             content: "Dedicated to the backbone of computing hardware, this track features research on FPGA-based System Design and Secure Hardware architectures. It examines the latest advancements in VLSI and EDA tools, alongside techniques for creating Low-power Hardware Architectures essential for energy-constrained applications."
         },
+        {
+            heading: "Track 7: RF, Microwave & Photonics",
+            content: "Antenna and Radar Systems, Microwave and Terahertz Technologies for Imaging, Millimetre-Wave and Terahertz Circuits, Photonic Integrated Circuits & Plasmonic."
+        },
+        {
+            heading: "Track 8: Data-Driven Technologies",
+            content: "Data Engineering and Analytics, Data mining, Data optimization and decision making, Behavioral and Sentiment Analysis."
+        }
     ]
 
     const updates = [
@@ -63,9 +71,9 @@ function MainSection() {
 
     return (
         <div className="inter primary-bg text-cl py-2 px-4 md:px-12 sm:py-4 mt-12 md:py-8 max-w-[1280px] mx-auto">
-            <div className="pb-6">
+            {/* <div className="pb-6">
                 <Marquee updates={updates} />
-            </div>
+            </div> */}
 
             <div className="mb-6 pb-4 border-b-1">
                 <div className="heading-cl text-3xl md:text-4xl tracking-normal font-bold">Welcome to ICIIS 2026</div>

@@ -1,10 +1,10 @@
 import React from 'react';
-import { User } from 'lucide-react'; // Importing User icon for placeholder
+import { User } from 'lucide-react'; 
 import { Footer, Navbar } from "../components/index.js";
 
 const committeeData = [
   {
-    title: "General Chair",
+    title: "General Chairs",
     members: [
       { 
         src: "https://www.iiitm.ac.in/images/demo/teachers/1760430650_Photo-KVA-side.jpg", 
@@ -21,7 +21,15 @@ const committeeData = [
     ]
   },
   {
-    title: "Finance Committee",
+    title: "General Co-Chairs",
+    members:[]
+  },
+  {
+    title: "Conference Secretary",
+    members:[]
+  },
+  {
+    title: "Finance Chairs",
     members: [
       { 
         src: "https://www.iiitm.ac.in/images/demo/teachers/1689745249_photo2.jpg", 
@@ -38,7 +46,7 @@ const committeeData = [
     ]
   },
   {
-    title: "Technical Program Committee (TPC)",
+    title: "Technical Program Chairs (TPC)",
     members: [
       { 
         src: "https://www.iiitm.ac.in/images/demo/teachers/1533545473_dranuraj.jpg", 
@@ -73,7 +81,7 @@ const committeeData = [
     ]
   },
   {
-    title: "Publicity & Website Committee",
+    title: "Publicity & Website Chairs",
     members: [
       { 
         src: "https://www.iiitm.ac.in/images/demo/teachers/1533546946_kaushalg.jpg", 
@@ -96,7 +104,7 @@ const committeeData = [
     ]
   },
   {
-    title: "Publication Committee",
+    title: "Publication Chairs",
     members: [
       { 
         src: "https://www.iiitm.ac.in/images/demo/teachers/1533094412_jdhar.jpg", 
@@ -119,7 +127,7 @@ const committeeData = [
     ]
   },
   {
-    title: "Registration Committee",
+    title: "Registration Chairs",
     members: [
       { 
         src: "https://www.iiitm.ac.in/images/demo/teachers/1761456376_formal_photo1.PNG", 
@@ -136,7 +144,7 @@ const committeeData = [
     ]
   },
   {
-    title: "International Relation Committee",
+    title: "International Relation Chairs",
     members: [
       { 
         src: "https://www.iiitm.ac.in/images/demo/teachers/1678951996_Profile_Pic.jpg", 

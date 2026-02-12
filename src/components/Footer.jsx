@@ -122,7 +122,7 @@ function Footer() {
       </div>
 
       {/* --- REFINED CMT DISCLAIMER (Professional & Integrated) --- */}
-      <div className="border-t border-blue-900/30">
+      {/* <div className="border-t border-blue-900/30">
         <div className="max-w-5xl mx-auto px-6 py-6 text-center">
             <div className="bg-[#081b38]/50 border border-blue-500/10 rounded-xl p-4 md:p-5">
                 <p className="text-md text-white leading-relaxed font-normal">
@@ -131,7 +131,7 @@ function Footer() {
                 </p>
             </div>
         </div>
-      </div>
+      </div> */}
 
       {/* Copyright Bar */}
       <div className="bg-[#051329] border-t border-white/5">

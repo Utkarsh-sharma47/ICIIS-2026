@@ -7,11 +7,12 @@ function Registration() {
       <Navbar />
       <div className="inter py-4 px-4 md:px-12 sm:py-4 md:py-6 max-w-[1280px] mx-auto">
         <div className="pb-5">
-          <div className="text-2xl font-semibold">Important Dates (third-phase)</div>
+          <div className="text-2xl font-semibold">Important Dates</div>
           <ul className="mt-2 ml-5 list-disc space-y-2 text-base">
-            <li><span className="font-semibold">Deadline for Early Bird Registration:</span> 10 October 2025</li>
-            <li><span className="font-semibold">Deadline for Camera-Ready Submission:</span> 20 October 2025</li>
-            <li><span className="font-semibold">All Registration Deadlines Close On:</span> 20 October 2025</li>
+            <li><span className="font-semibold">Paper Submission Open:</span> 01 March, 2026</li>
+            <li><span className="font-semibold">Paper Submission Deadline:</span> 30 April, 2026</li>
+            <li><span className="font-semibold">Acceptance Notification:</span> 30 June, 2026</li>
+            <li><span className="font-semibold">Camera Ready Submission:</span> 15 July, 2026</li>
           </ul>
         </div>
         <div className="pb-5">
@@ -43,15 +44,16 @@ function Registration() {
         <div className="pb-5">
           <div className="text-2xl font-semibold">Registration Queries</div>
           <div className="text-base ml-5 mt-2"><p>For any queries regarding registration, kindly contact:</p>
-            <p> Registration team, ReACS 2025</p>
-            <p>📧 Email: reacs2025@iiitm.ac.in</p>
+            <p> Registration team, ICIIS 2026</p>
+            <p>📧 Email: iciis2026@iiitm.ac.in</p>
           </div>
         </div>
         <div className="pb-5">
           <div className="text-2xl font-semibold">Registration Form</div>
           <div className="text-base ml-5 mt-2"><p>For authors with multiple accepted papers, the registration form must be filled out separately for each paper.</p>
             <a
-              href="https://docs.google.com/forms/d/e/1FAIpQLSdzICBCcQgT-De1oPG2xxlKoc_itvNbwmDSApMbmeT_PuRl7A/viewform"
+              // href="https://docs.google.com/forms/d/e/1FAIpQLSdzICBCcQgT-De1oPG2xxlKoc_itvNbwmDSApMbmeT_PuRl7A/viewform"
+              href="#"
               className="flex items-center w-fit gap-2 hover:bg-blue-200 hover:text-blue-800 bg-[#043A75] text-white mt-2 px-6 py-3 rounded-full transition-colors"
             >
               <span className="font-semibold">
@@ -83,12 +85,12 @@ function Registration() {
               shared on the conference website in due course of time.</li>
           </ol>
         </div>
-        <div className="text-2xl font-semibold">Registration Fees Details</div>
-        <RegistrationFees />
-        <div className="mt-2 text-base/relaxed">
+        {/* <div className="text-2xl font-semibold">Registration Fees Details</div>
+        <RegistrationFees /> */}
+        {/* <div className="mt-2 text-base/relaxed">
           <span className="font-bold">*</span> The registration fee is not refundable.
-        </div>
-        <div className="py-4">
+        </div> */}
+        {/* <div className="py-4">
           <div className="font-semibold">The account details for payment of Registration fees are given as follows:</div>
           <div className="mt-2 text-base ml-5 space-y-1">
             <p><span className="font-bold">Account Name: </span>ABVIIITMG IEEE REACS 2025</p>
@@ -99,11 +101,11 @@ function Registration() {
             <p><span className="font-bold">IFSC Code: </span>BKID0009462</p>
             <p><span className="font-bold">SWIFT Code: </span>BKIDINBBGWA</p>
           </div>
-        </div>
-        <div className="py-2">
+        </div> */}
+        {/* <div className="py-2">
           <div className="font-bold">Scan & Pay</div>
           <img className="ml-5 mt-2 h-80" src={qr} alt="Qr code" />
-        </div>
+        </div> */}
       </div>
       <Footer />
     </>
