@@ -1,5 +1,6 @@
 import TimeLine from "./Timeline"
 import Marquee from "./Marquee"
+import { CalendarDays, Layers } from 'lucide-react';
 
 function MainSection() {
     const RegularTracks = [
@@ -37,75 +38,77 @@ function MainSection() {
         }
     ]
 
-    const updates = [
-        // { text: "Third Phase Paper Submission Starts on 02 August 2025" },
-        // { text: "Extended Second Phase Paper Submission Deadline 20 July 2025" },
-        {
-            text: "Conference Successfully Concluded",
-            style: "color: blue;",
-        },
-        {
-            text: "Registration instructions and details are updated",
-            url: "/registration",
-        },
-        {
-            text: "Program schedule is live now",
-            url: "/schedule",
-        },
-        {
-            text: "Accommodation is available at ABV-IIITM Gwalior",
-            url: "/attende",
-        },
-        { text: "Second Phase Acceptance Notification mail has been sent" },
-        {
-            text: "Keynote Speakers",
-            url: "/speakers",
-            style: "color: blue;"
-        },
-        {
-            text: "Camera Ready Submission Guidelines",
-            url: "/crs",
-            style: "color: blue;"
-        },
-    ]
-
     return (
-        <div className="inter primary-bg text-cl py-2 px-4 md:px-12 sm:py-4 mt-12 md:py-8 max-w-[1280px] mx-auto">
-            {/* <div className="pb-6">
-                <Marquee updates={updates} />
-            </div> */}
-
-            <div className="mb-6 pb-4 border-b-1">
-                <div className="heading-cl text-3xl md:text-4xl tracking-normal font-bold">Welcome to ICIIS 2026</div>
-                <div className="text-sm/relaxed mt-4 tracking-wide text-justify">
-                    <span className="font-semibold">ICIIS 2026 covers a wide range of engineering disciplines, with added focus on sustainability and trustworthiness.</span> The conference is being organised to function as a platform for dissemination of recent high-quality research work. It covers the wide domain of Computer Science, Electronics, and Electrical Engineering and will provide a means to exchange innovative ideas and recent advances among researchers from academia and industry.
+        <div className="font-sans text-slate-800 py-6 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
+            
+            {/* --- Welcome Section --- */}
+            <div className="mb-8 border-b border-slate-200 pb-6">
+                <h1 className="text-3xl md:text-4xl font-bold text-[#0f172a] tracking-tight mb-4">
+                    Welcome to <span className="text-blue-700">ICIIS 2026</span>
+                </h1>
+                <div className="text-base text-slate-700 leading-snug text-justify max-w-5xl">
+                    <p>
+                        <span className="font-bold text-slate-900">ICIIS 2026 covers a wide range of engineering disciplines</span>, with added focus on sustainability and trustworthiness. The conference is being organised to function as a platform for dissemination of recent high-quality research work. It covers the wide domain of Computer Science, Electronics, and Electrical Engineering and will provide a means to exchange innovative ideas and recent advances among researchers from academia and industry.
+                    </p>
                 </div>
             </div>
 
-            <div className="flex md:space-x-8">
+            <div className="flex flex-col md:flex-row gap-6">
+                
+                {/* --- Left Column: Tracks --- */}
                 <div className="md:w-[70%]">
-                    <div>
-                        <div className="heading-cl text-2xl md:text-3xl font-bold text-justify mb-8">Regular Tracks</div>
+                    <div className="flex items-center gap-2 mb-4">
+                        <Layers className="w-6 h-6 text-blue-600" />
+                        <h2 className="text-2xl font-bold text-[#0f172a]">
+                            Conference Tracks
+                        </h2>
+                    </div>
+
+                    <div className="space-y-4">
                         {RegularTracks.map((item, index) => (
-                            <div key={index} className="mt-6 md:mt-8">
-                                {/* Enlarged Heading: text-xl on mobile, text-2xl on desktop, with brand color */}
-                                <div className="text-[#000000d0] tracking-wide text-xl md:text-2xl font-bold mb-2">
+                            <div 
+                                key={index} 
+                                className="group bg-white rounded-lg p-5 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 relative overflow-hidden"
+                            >
+                                {/* Professional Left Accent Border */}
+                                <div className="absolute left-0 top-0 bottom-0 w-1 bg-blue-600 group-hover:bg-blue-500 transition-colors"></div>
+                                
+                                <h3 className="text-xl md:text-2xl font-extrabold text-[#0f172a] mb-2 group-hover:text-blue-700 transition-colors pl-1">
                                     {item.heading}
-                                </div>
-                                <div className="text-justify text-gray-700 tracking-wide text-sm/relaxed leading-6">
+                                </h3>
+                                
+                                <p className="text-slate-700 text-sm leading-6 text-justify pl-1 font-medium">
                                     {item.content}
-                                </div>
+                                </p>
                             </div>
                         ))}
-                        <div className="md:hidden my-5 border-t-1 pt-6">
-                            <div className="text-2xl md:text-3xl heading-cl font-bold mb-3">Important Dates</div>
-                            <TimeLine />
+                    </div>
+
+                    {/* Mobile Timeline (Visible only on small screens) */}
+                    <div className="md:hidden mt-8 bg-slate-50 p-4 rounded-lg border border-slate-200">
+                        <div className="flex items-center gap-2 mb-3">
+                            <CalendarDays className="w-5 h-5 text-blue-600" />
+                            <h3 className="text-xl font-bold text-[#0f172a]">Important Dates</h3>
                         </div>
+                        <TimeLine />
                     </div>
                 </div>
-                <div className="max-md:hidden w-[30%]">
-                    <div className="text-2xl md:text-3xl heading-cl font-bold mb-3">Important Dates</div>
-                    <TimeLine />
+
+                {/* --- Right Column: Sidebar (Sticky Timeline) --- */}
+                <div className="hidden md:block md:w-[30%]">
+                    <div className="sticky top-24">
+                        <div className="bg-slate-50 rounded-lg p-5 border border-slate-200 shadow-sm">
+                            <div className="flex items-center gap-2 mb-4 border-b border-slate-200 pb-2">
+                                <CalendarDays className="w-5 h-5 text-blue-600" />
+                                <h3 className="text-lg font-bold text-[#0f172a]">Important Dates</h3>
+                            </div>
+                            
+                            {/* Timeline Component Injection */}
+                            <div className="text-sm">
+                                <TimeLine />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

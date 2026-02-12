@@ -22,11 +22,32 @@ const committeeData = [
   },
   {
     title: "General Co-Chairs",
-    members:[]
+    members:[
+      { 
+        src: "https://web2.ee.pdn.ac.lk/sites/default/files/inline-images/DrID.jpg", 
+        name: "Dr. Isuru Dasanayake", 
+        dsgn: "University of Peradeniya, Sri Lanka",
+        link: ""
+      },
+      { 
+        src: "https://www.iiitm.ac.in/images/Photo.jpg", 
+        name: "Dr. Vinod Kumar Jain", 
+        dsgn: "ABV-IIITM, India",
+        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/dr-vinod-kumar-jain"
+      }
+    ]
   },
   {
     title: "Conference Secretary",
-    members:[]
+    members:[
+      
+      { 
+        src: "https://www.iiitm.ac.in/images/demo/teachers/1689745249_photo2.jpg", 
+        name: "Dr. Rahul Kala", 
+        dsgn: "ABV-IIITM, India",
+        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Rahul" 
+      }
+    ]
   },
   {
     title: "Finance Chairs",

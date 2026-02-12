@@ -122,16 +122,16 @@ function Footer() {
       </div>
 
       {/* --- REFINED CMT DISCLAIMER (Professional & Integrated) --- */}
-      {/* <div className="border-t border-blue-900/30">
+      <div className="border-t border-blue-900/30">
         <div className="max-w-5xl mx-auto px-6 py-6 text-center">
             <div className="bg-[#081b38]/50 border border-blue-500/10 rounded-xl p-4 md:p-5">
-                <p className="text-md text-white leading-relaxed font-normal">
+                <p className="text-sm text-white leading-relaxed font-normal">
                     <span className="text-white font-semibold block mb-1">Acknowledgement:</span>
                     "The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support."
                 </p>
             </div>
         </div>
-      </div> */}
+      </div>
 
       {/* Copyright Bar */}
       <div className="bg-[#051329] border-t border-white/5">
