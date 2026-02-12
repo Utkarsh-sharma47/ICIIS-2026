@@ -54,13 +54,13 @@ function HeroSection() {
 
         .nav-item {
           transition: all 0.3s ease;
-          color: #0f172a;
+          color: #0f172a; /* Slate 900 for contrast on glass */
           font-weight: 700;
         }
         .nav-item:hover {
           background: rgba(255, 255, 255, 1);
           transform: translateY(-2px);
-          color: #0284c7;
+          color: #0284c7; /* Blue 600 */
           box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
       `}</style>
@@ -101,15 +101,14 @@ function HeroSection() {
         <div className="relative z-10 flex-grow flex flex-col justify-center items-center px-4 w-full max-w-7xl mx-auto py-12">
           <div className="animate-fade-in-up flex flex-col items-center w-full">
             
-            {/* --- MAIN LOGO (Enlarged) --- */}
-            <div className="mb-10 transition-transform duration-500 hover:scale-105">
-               {/* Larger Padding and Dimensions */}
-               <div className="bg-white/95 backdrop-blur-sm p-6 rounded-3xl shadow-[0_0_40px_rgba(255,255,255,0.25)] border border-white/40">
+            {/* --- MAIN LOGO (Top) --- */}
+            <div className="mb-8 transition-transform duration-500 hover:scale-105">
+               {/* White Badge Container to blend the logo background */}
+               <div className="bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-[0_0_30px_rgba(255,255,255,0.2)] border border-white/40">
                  <img 
                    src="/iciis_logo.png" 
                    alt="ICIIS Logo" 
-                   // Increased height classes: h-32 (mobile), h-40 (tablet), h-48 (desktop)
-                   className="h-32 md:h-40 lg:h-48 w-auto object-contain" 
+                   className="h-24 md:h-32 lg:h-36 w-auto object-contain" 
                  />
                </div>
             </div>
@@ -143,7 +142,7 @@ function HeroSection() {
             </div>
 
             {/* --- NAVIGATION BAR --- */}
-            <nav className="mt-12 w-full max-w-5xl hidden md:block">
+            <nav className="mt-10 w-full max-w-5xl hidden md:block">
               <div className="glass-panel rounded-full px-2 py-2 mx-auto shadow-2xl">
                 <div className="flex items-center justify-between text-sm font-bold">
                   {mainNavItems.map((item) => (
@@ -159,35 +158,35 @@ function HeroSection() {
               </div>
             </nav>
 
-            {/* --- BOTTOM LOGOS (No Background) --- */}
+            {/* --- BOTTOM LOGOS (Original Colors) --- */}
             <div className="mt-16 w-full flex justify-center">
-              {/* Removed the white background container */}
-              <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-                
-                {/* Added drop-shadow-lg to help logos pop against dark background */}
-                <img
-                  src={ieee_logo}
-                  alt="IEEE Logo"
-                  className="h-8 md:h-12 lg:h-14 w-auto object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]" 
-                />
-                
-                {/* Vertical Separator (Lightened for visibility) */}
-                <div className="w-px h-10 bg-white/40"></div>
-                
-                <img
-                  src={iiit_logo}
-                  alt="IIIT Logo"
-                  className="h-10 md:h-14 lg:h-16 w-auto object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
-                />
-                
-                {/* Vertical Separator */}
-                <div className="w-px h-10 bg-white/40"></div>
+              {/* White Container to ensure IEEE Blue logos are visible */}
+              <div className="backdrop-blur-md rounded-xl px-8 py-4 shadow-lg">
+                <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
+                  <img
+                    src={ieee_logo}
+                    alt="IEEE Logo"
+                    className="h-8 md:h-12 lg:h-14 w-auto object-contain" 
+                    // No invert filter here, so it stays Blue
+                  />
+                  {/* Vertical Separator */}
+                  <div className="w-px h-10 bg-slate-300"></div>
+                  
+                  <img
+                    src={iiit_logo}
+                    alt="IIIT Logo"
+                    className="h-10 md:h-14 lg:h-16 w-auto object-contain"
+                  />
+                  
+                  {/* Vertical Separator */}
+                  <div className="w-px h-10 bg-slate-300"></div>
 
-                <img
-                  src={ieee}
-                  alt="IEEE Society Logo"
-                  className="h-8 md:h-12 lg:h-14 w-auto object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
-                />
+                  <img
+                    src={ieee}
+                    alt="IEEE Society Logo"
+                    className="h-8 md:h-12 lg:h-14 w-auto object-contain"
+                  />
+                </div>
               </div>
             </div>
 
