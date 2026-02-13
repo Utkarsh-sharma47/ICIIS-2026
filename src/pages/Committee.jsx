@@ -12,18 +12,18 @@ const committeeData = [
         dsgn: "ABV-IIITM, India",
         link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.KVArya"
       },
-       { 
-        src: "/manish_mits.png", 
-        name: "DR. MANISH DIXIT", 
-        dsgn: "Madhav Institute of Technology and Science, Gwalior, India",
-        link: "https://web.mitsgwalior.in/faculty-profiles-cse-2/dr-manish-dixit-2"
-      },
       { 
         src: "https://www.iiitm.ac.in/images/demo/teachers/1692009722_WhatsApp%20Image%202023-08-14%20at%2015.46.28.jpeg", 
         name: "Prof. Shashikala Tapaswi", 
         dsgn: "ABV-IIITM, India",
         link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Prof.Shashikala"
-      }
+      },
+      { 
+        src: "/manish_mits.png", 
+        name: "DR. MANISH DIXIT", 
+        dsgn: "Madhav Institute of Technology and Science, Gwalior, India",
+        link: "https://web.mitsgwalior.in/faculty-profiles-cse-2/dr-manish-dixit-2"
+      },
     ]
   },
   {
