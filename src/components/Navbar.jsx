@@ -85,8 +85,8 @@ const Navbar = () => {
               <div className="relative">
                 <div className="absolute inset-0 bg-blue-500 blur-xl opacity-20 rounded-full group-hover:opacity-30 transition-opacity"></div>
                 <img 
-                  src="/iiitm.png" 
-                  alt="IIITM Logo" 
+                  src="/iciis_logo.png" 
+                  alt="ICIIS 2026 Logo" 
                   className="h-10 md:h-12 w-auto object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
                 />
               </div>
