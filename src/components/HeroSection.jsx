@@ -11,6 +11,11 @@ function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // --- FIX: Define the toggleMenu function here ---
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   const mainNavItems = [
     { name: "Home", path: "/" },
     { name: "Registration", path: "/registration" },
@@ -87,7 +92,7 @@ function HeroSection() {
         {/* Mobile Menu Button */}
         <div className="md:hidden z-50 absolute right-4 top-4">
           <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={toggleMenu} // Fixed: Uses the function now
             className="inline-flex items-center justify-center p-2 bg-white rounded-lg text-slate-900 shadow-lg hover:bg-slate-100 transition-all"
           >
             {isMenuOpen ? (
@@ -226,7 +231,7 @@ function HeroSection() {
         {isMenuOpen && (
           <div
             className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden transition-opacity"
-            onClick={toggleMenu}
+            onClick={toggleMenu} // Fixed: Calling the defined function
           ></div>
         )}
       </div>
