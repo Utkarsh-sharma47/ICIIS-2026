@@ -19,7 +19,7 @@ const committeeData = [
         link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Prof.Shashikala"
       },
       { 
-        src: "/manish_mits.png", 
+        src: "/Drmd.png", 
         name: "DR. MANISH DIXIT", 
         dsgn: "Madhav Institute of Technology and Science, Gwalior, India",
         link: "https://web.mitsgwalior.in/faculty-profiles-cse-2/dr-manish-dixit-2"
