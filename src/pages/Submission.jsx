@@ -127,14 +127,19 @@ function Submission() {
                 </a>
 
                 {/* CMT Acknowledgement */}
-                <div className="mt-8 pt-6 border-t border-slate-200">
-                    <p className="text-xs text-slate-500 italic max-w-3xl mx-auto">
+             </div>
+        </div>
+
+        <div className="border border-blue-200 bg-blue-50/30 rounded-xl p-8 text-center relative overflow-hidden mt-8">
+             <div className="mt-2">
+                    <p className="text-lg text-slate-500 italic max-w-3xl mx-auto">
                         <span className="font-bold text-slate-700 not-italic">Acknowledgement: </span>
                         The Microsoft CMT service was used for managing the peer-reviewing process for this conference. This service was provided for free by Microsoft and they bore all expenses, including costs for Azure cloud services as well as for software development and support.
                     </p>
                 </div>
-             </div>
         </div>
+
+
 
       </div>
       <Footer />
