@@ -52,10 +52,10 @@ function Submission() {
             </div>
         </div>
 
-        <hr className="border-slate-200" />
+        {/* <hr className="border-slate-200" /> */}
 
         {/* --- Conference Proceedings --- */}
-        <div className="flex flex-col md:flex-row gap-8 items-start">
+        {/* <div className="flex flex-col md:flex-row gap-8 items-start">
              <div className="flex-1">
                 <div className="flex items-center gap-3 mb-4">
                     <BookOpen className="w-6 h-6 text-blue-700" />
@@ -73,7 +73,7 @@ function Submission() {
                     </div>
                 </div>
              </div>
-        </div>
+        </div> */}
 
         <hr className="border-slate-200" />
 
