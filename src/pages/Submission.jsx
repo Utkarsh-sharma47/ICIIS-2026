@@ -202,7 +202,7 @@ function Submission() {
               <div className="mt-3 text-sm">
                 All manuscripts must be submitted electronically through the <span className="font-bold">ICIIS 2026 submission portal.</span>
                   <a
-                    href="#"
+                    href="https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FICIIS2026"
                     className="flex items-center w-fit gap-2 hover:bg-blue-200 hover:text-blue-800 bg-[#043A75] text-white mt-2 px-6 py-3 rounded-full transition-colors"
                   >
                     <Upload className="w-4 h-4" />
