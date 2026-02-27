@@ -80,6 +80,11 @@ function Registration() {
                         <span className="text-blue-600 font-bold text-xs mt-0.5 border border-blue-200 w-6 h-6 flex items-center justify-center rounded-full flex-shrink-0">4</span>
                         <span>First-phase accepted papers must register before the deadline to be included in proceedings.</span>
                     </li>
+                    <li className="flex gap-3 items-start">
+                        <span className="text-blue-600 font-bold text-xs mt-0.5 border border-blue-200 w-6 h-6 flex items-center justify-center rounded-full flex-shrink-0">5</span>
+                        <span>The author's information (Addition/Deletion of Authors) can not be altered after the acceptance of the paper.</span>
+                    </li>
+
                 </ul>
             </div>
         </div>
