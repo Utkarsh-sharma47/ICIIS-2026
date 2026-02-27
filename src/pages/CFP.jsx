@@ -62,7 +62,7 @@ function CFP() {
                             The present world is witnessing unprecedented advancements in the field of <span className="font-bold text-slate-900">Computing and Systems</span>, with rapid technological progress transforming the way we interact, compute, analyze, and automate. To foster academic and industry collaboration and to showcase the latest breakthroughs, the <span className="font-bold text-slate-900">2026 IEEE International Conference on Industrial and Information Systems</span> is being organized by the <span className="font-bold text-blue-800">ABV-IIITM Gwalior, India.</span>
                         </p>
                         <p>
-                            ICIIS 2026 aims to serve as a vibrant platform for the dissemination of high-quality research and innovation in the wide domain of <span className="font-bold text-slate-900">All Engineering Disciplines</span>. The conference will emphasize active participation from PhD scholars, postdoctoral researchers, early-career scientists, and professionals, offering a space for collaborative discussion, knowledge exchange, and networking.
+                            ICIIS 2026 aims to serve as a vibrant platform for the dissemination of high-quality research and innovation in the wide domain of <span className="font-bold text-slate-900">Electrical / Electronic / Computer Science & Engineering Disciplines</span>. The conference will emphasize active participation from PhD scholars, postdoctoral researchers, early-career scientists, and professionals, offering a space for collaborative discussion, knowledge exchange, and networking.
                         </p>
                     </div>
 
