@@ -164,6 +164,9 @@ function Submission() {
             <div className="text-sm mt-3">
               Papers not compliant with the IEEE template including appropriate referencing or exceeding the page limit will be returned without review. Only original papers that have not been published or submitted for publication elsewhere will be considered. The paper must clearly indicate the research area, main results, and contributions.
             </div>
+            <div className="font-bold text-sm mt-3">
+              The author's information (Addition/Deletion of Authors) can not be altered after the acceptance of the paper.
+            </div>
             <div className="py-8">
               <div>All submissions must strictly adhere to the following guidelines:</div>
               <div className="mt-3 text-sm ml-6">

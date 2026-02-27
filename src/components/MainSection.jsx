@@ -48,7 +48,7 @@ function MainSection() {
                 </h1>
                 <div className="text-base text-slate-700 leading-snug text-justify max-w-5xl">
                     <p>
-                        <span className="font-bold text-slate-900">ICIIS 2026 covers a wide range of engineering disciplines</span>, with added focus on sustainability and trustworthiness. The conference is being organised to function as a platform for dissemination of recent high-quality research work. It covers the wide domain of Computer Science, Electronics, and Electrical Engineering and will provide a means to exchange innovative ideas and recent advances among researchers from academia and industry.
+                        <span className="font-bold text-slate-900">ICIIS 2026 covers a wide range of engineering disciplines</span>, with added focus on sustainability and trustworthiness. This conference (<a href="https://conferences.ieee.org/conferences_events/conferences/conferencedetails/71472" className="text-blue-600 underline font-semibold">IEEE Conference ID: 71472</a>) is being organised to function as a platform for dissemination of recent high-quality research work. It covers the wide domain of Computer Science, Electronics, and Electrical Engineering and will provide a means to exchange innovative ideas and recent advances among researchers from academia and industry.
                     </p>
                 </div>
             </div>
