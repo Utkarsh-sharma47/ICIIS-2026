@@ -71,7 +71,7 @@ function CFP() {
                         <div className="bg-blue-900 text-white rounded-xl p-6 shadow-lg flex flex-col items-center text-center justify-center space-y-4 relative overflow-hidden group h-full">
                             {/* Glow Effect */}
                             <div className="absolute inset-0 bg-blue-600 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
-                            
+
                             <FileText className="w-12 h-12 text-blue-300" />
                             <div>
                                 <h3 className="text-xl font-bold">Official Brochure</h3>
@@ -98,15 +98,15 @@ function CFP() {
                         <Layers className="w-7 h-7 text-blue-700" />
                         <h2 className="text-2xl md:text-3xl font-bold text-[#0f172a]">Conference Tracks</h2>
                     </div>
-                    
+
                     <p className="text-lg text-slate-600 mb-8 max-w-3xl">
                         ICIIS 2026 welcomes submission of papers related to the conference theme including, but not limited to, the following tracks:
                     </p>
 
                     <div className="grid grid-cols-1 gap-6">
                         {RegularTracks.map((item, index) => (
-                            <div 
-                                key={index} 
+                            <div
+                                key={index}
                                 className="group bg-white rounded-lg p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all duration-200 relative overflow-hidden"
                             >
                                 <div className="absolute left-0 top-0 bottom-0 w-1 bg-blue-600 group-hover:bg-blue-500 transition-colors"></div>
@@ -120,6 +120,14 @@ function CFP() {
                         ))}
                     </div>
                 </div>
+                <hr className="border-slate-200" />
+                <div className="">
+                    <div className="text-2xl font-bold">Conference Proceedings</div>
+                    <div className="mt-3 text-sm">
+                        The <span className="font-bold">proceedings of ICIIS 2026 will be published by IEEE</span> (<a href="https://conferences.ieee.org/conferences_events/conferences/conferencedetails/71472" className="text-blue-600 underline">Conference ID: 71472</a>). All accepted and presented papers will be submitted to <span className="font-bold">IEEE Xplore,</span> which is indexed with world’s leading Abstracting & Indexing (A&I) databases (SCOPUS etc.) subject to meeting <span className="font-bold">IEEE’s quality and scope requirements.</span> Papers accepted for presentation but <span className="font-bold">not presented at the conference (no-show)</span> will <span className="font-bold">not be included in the final proceedings.</span>
+                    </div>
+                </div>
+                
 
                 <hr className="border-slate-200" />
 
@@ -129,14 +137,14 @@ function CFP() {
                         <BookOpen className="w-7 h-7 text-blue-700" />
                         <h2 className="text-2xl font-bold text-[#0f172a]">Manuscript Templates</h2>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                         <div>
                             <p className="text-slate-700 mb-4 leading-relaxed">
                                 Authors must prepare their manuscripts using the <span className="font-bold text-slate-900">IEEE conference templates</span>. Please refer to the IEEE Author Guidelines for detailed instructions on formatting, structuring, headings, figures, tables, and references.
                             </p>
                         </div>
-                        
+
                         <div className="space-y-3">
                             <h3 className="font-semibold text-slate-900 mb-2">Download Templates:</h3>
                             <a href="https://www.ieee.org/conferences/publishing/templates.html" target="_blank" rel="noreferrer" className="flex items-center justify-between p-3 bg-white border border-slate-200 rounded-lg hover:border-blue-400 hover:shadow-sm transition-all group">

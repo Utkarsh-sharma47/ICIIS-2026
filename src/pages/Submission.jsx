@@ -180,13 +180,13 @@ function Submission() {
               </div>
             </div>
             <hr />
-            {/* <div className="py-8">
+            <div className="py-8">
               <div className="text-2xl font-bold">Conference Proceedings</div>
               <div className="mt-3 text-sm">
-                The <span className="font-bold">proceedings of ICIIS 2026 will be published by IEEE</span> (<a href="https://conferences.ieee.org/conferences_events/conferences/conferencedetails/67479" className="text-blue-600 underline">Conference ID: 67479</a>). All accepted and presented papers will be submitted to <span className="font-bold">IEEE Xplore,</span> which is indexed with world’s leading Abstracting & Indexing (A&I) databases (SCOPUS etc.) subject to meeting <span className="font-bold">IEEE’s quality and scope requirements.</span> Papers accepted for presentation but <span className="font-bold">not presented at the conference (no-show)</span> will <span className="font-bold">not be included in the final proceedings.</span>
+                The <span className="font-bold">proceedings of ICIIS 2026 will be published by IEEE</span> (<a href="https://conferences.ieee.org/conferences_events/conferences/conferencedetails/71472" className="text-blue-600 underline">Conference ID: 71472</a>). All accepted and presented papers will be submitted to <span className="font-bold">IEEE Xplore,</span> which is indexed with world’s leading Abstracting & Indexing (A&I) databases (SCOPUS etc.) subject to meeting <span className="font-bold">IEEE’s quality and scope requirements.</span> Papers accepted for presentation but <span className="font-bold">not presented at the conference (no-show)</span> will <span className="font-bold">not be included in the final proceedings.</span>
               </div>
             </div>
-            <hr /> */}
+            <hr />
             <div className="py-8">
               <div className="text-2xl font-bold">Manuscript Templates</div>
               <div className="mt-3 text-sm">
