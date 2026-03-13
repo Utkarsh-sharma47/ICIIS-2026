@@ -21,7 +21,7 @@ const committeeData = [
       },
       { 
         src: "/Drmd.png", 
-        name: "Dr. Manish Dixit", 
+        name: "Prof. Manish Dixit", 
         dsgn: "MITS Gwalior, India",
         link: "https://web.mitsgwalior.in/faculty-profiles-cse-2/dr-manish-dixit-2"
       },
@@ -178,6 +178,12 @@ const committeeData = [
         name: "Dr. Anjali", 
         dsgn: "ABV-IIITM, India",
         link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/dr-anjali"
+      },
+      { 
+        src: "https://illinois-state-dm-s3.imgix.net/vdevabh/pci/Vijay%20profile%20pic-1.jpg?auto=format&w=150&h=225&crop=faces&fit=crop&fm=jpeg&q=90", 
+        name: "Prof. Vijay Devabhaktuni", 
+        dsgn: "Illinois State University, USA",
+        link: "https://illinois-state-dm-s3.imgix.net/vdevabh/pci/Vijay%20profile%20pic-1.jpg?auto=format&w=150&h=225&crop=faces&fit=crop&fm=jpeg&q=90"
       }
     ]
   }
