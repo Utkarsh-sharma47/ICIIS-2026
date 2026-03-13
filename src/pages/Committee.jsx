@@ -127,6 +127,12 @@ const committeeData = [
         name: "Dr. Vivek Kumar Singh", 
         dsgn: "ABV-IIITM, India",
         link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.VivekKumar"
+      },
+      { 
+        src: "https://static.wixstatic.com/media/e26087_5e05a06b9abf4ca1955a2f14850073d6~mv2.jpg/v1/crop/x_0,y_19,w_302,h_220/fill/w_350,h_254,al_c,lg_1,q_80,enc_avif,quality_auto/rana.jpg", 
+        name: "Dr. Prashant Singh Rana", 
+        dsgn: "Thapar Institute of Engg & Tech,Patiala Punjab",
+        link: "https://www.psrana.com"
       }
     ]
   },
@@ -150,7 +156,8 @@ const committeeData = [
         name: "Dr. Vijay Pal Rathore", 
         dsgn: "ABV-IIITM, India",
         link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Vijaypal"
-      }
+      },
+      
     ]
   },
   {
