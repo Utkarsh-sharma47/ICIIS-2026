@@ -33,7 +33,7 @@ const committeeData = [
       { 
         src: "/Drmd.png", 
         name: "Prof. Manish Dixit", 
-        dsgn: "MITS Gwalior, India",
+        dsgn: "Vice Chair Person, IEEE MP Section, MITS Gwalior, India",
         link: "https://web.mitsgwalior.in/faculty-profiles-cse-2/dr-manish-dixit-2"
       },
     ]
@@ -270,7 +270,7 @@ const trackChairs = [
         link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/DrNeelesh"
       },
       {
-        src: "https://mnnit.ac.in/userprofile/uploads/89091-IMG-20220826-WA0010.jpg",
+        src: "https://www.mnnit.ac.in/images/newstories/2017/R_gupta.jpg",
         name: "Prof. Rajesh Gupta",
         dsgn: "MNNIT Allahabad",
         link: "https://mnnit.ac.in/profile/previewp.php?id=1643"
