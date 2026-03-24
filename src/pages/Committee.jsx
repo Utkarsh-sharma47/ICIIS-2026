@@ -5,6 +5,17 @@ import { Footer, Navbar } from "../components/index.js";
 // --- DATA: Main Committee ---
 const committeeData = [
   {
+    title: "Patron",
+    members: [
+       { 
+        src: "https://www.iiitm.ac.in/images/demo/teachers/1650440085_Prof.-Sri-Niwas-Singh.jpg", 
+        name: "Prof. S. N. Singh", 
+        dsgn: "Director, ABV-IIITM, India",
+        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/prof-sri-niwas"
+      },
+    ]
+  },
+  {
     title: "General Chairs",
     members: [
       { 
