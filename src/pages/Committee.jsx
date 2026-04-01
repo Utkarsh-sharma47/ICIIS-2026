@@ -33,7 +33,7 @@ const committeeData = [
       { 
         src: "/Drmd.png", 
         name: "Prof. Manish Dixit", 
-        dsgn: "Vice Chair Person, IEEE MP Section, MITS Gwalior, India",
+        dsgn: "ChairPerson (Elected), IEEE MP Section, MITS Gwalior, India",
         link: "https://web.mitsgwalior.in/faculty-profiles-cse-2/dr-manish-dixit-2"
       },
     ]
