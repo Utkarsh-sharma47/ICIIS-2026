@@ -5,10 +5,12 @@ import img2 from "./../assets/collegeImg2.svg";
 import ieee_logo from "./../assets/ieee_logo.png";
 import ieee from "./../assets/ieee.png";
 import iiit_logo from "./../assets/iiit.png";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isCommitteeOpen, setIsCommitteeOpen] = useState(false);
+  const [isMobileCommitteeOpen, setIsMobileCommitteeOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // --- FIX: Define the toggleMenu function here ---
@@ -19,10 +21,14 @@ function HeroSection() {
   const mainNavItems = [
     { name: "Home", path: "/" },
     { name: "Registration", path: "/registration" },
-    { name: "Committee", path: "/committee" },
     { name: "Call for Papers", path: "/cfp" },
     { name: "Paper Submission", path: "/submission" },
     { name: "About", path: "/about" }
+  ];
+
+  const committeeItems = [
+    { name: "Organizing Committee", path: "/committee" },
+    { name: "International Advisory Committee", path: "/advisory-committee" },
   ];
 
   const slides = [`${img1}`, `${img2}`];
@@ -159,6 +165,29 @@ function HeroSection() {
                       {item.name}
                     </Link>
                   ))}
+                  <div
+                    className="relative"
+                    onMouseEnter={() => setIsCommitteeOpen(true)}
+                    onMouseLeave={() => setIsCommitteeOpen(false)}
+                  >
+                    <button className="px-6 py-3 rounded-full nav-item inline-flex items-center gap-1">
+                      Committee
+                      <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isCommitteeOpen ? "rotate-180" : ""}`} />
+                    </button>
+                    <div className={`absolute left-0 mt-2 w-72 rounded-xl shadow-2xl bg-white border border-slate-200 transform transition-all duration-200 origin-top-left ${isCommitteeOpen ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 -translate-y-2 invisible"}`}>
+                      <div className="py-2">
+                        {committeeItems.map((item) => (
+                          <Link
+                            key={item.path}
+                            to={item.path}
+                            className="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-700 transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </nav>
@@ -224,6 +253,33 @@ function HeroSection() {
                   {item.name}
                 </Link>
               ))}
+
+              <div className="space-y-1">
+                <button
+                  onClick={() => setIsMobileCommitteeOpen(!isMobileCommitteeOpen)}
+                  className="w-full flex items-center justify-between px-4 py-3 text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors font-bold border-l-4 border-transparent hover:border-blue-600"
+                >
+                  <span>Committee</span>
+                  <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${isMobileCommitteeOpen ? "rotate-180 text-blue-700" : "text-slate-500"}`} />
+                </button>
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileCommitteeOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}>
+                  <div className="bg-slate-50 rounded-lg py-2 mx-1 border border-slate-200">
+                    {committeeItems.map((item) => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        onClick={() => {
+                          setIsMobileCommitteeOpen(false);
+                          setIsMenuOpen(false);
+                        }}
+                        className="block pl-5 pr-4 py-2.5 text-sm font-semibold border-l-2 ml-3 border-transparent text-slate-600 hover:text-blue-700 hover:border-blue-600 transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
