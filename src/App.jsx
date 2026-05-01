@@ -6,6 +6,7 @@ import Submission from "./pages/Submission"
 import CFP from "./pages/CFP"
 import { Layout1 } from "./layouts"
 import Committee from "./pages/Committee"
+import AdvisoryCommittee from "./pages/AdvisoryCommittee"
 import About from "./pages/About"
 import ScrollToTop from "./components/ScrollToTop"
 import CRS from "./pages/CRS"
@@ -22,6 +23,7 @@ function App() {
         <Route path="/submission" element={<Submission />} />
         <Route path="/cfp" element={<CFP />} />
         <Route path="/committee" element={<Committee />} />
+        <Route path="/advisory-committee" element={<AdvisoryCommittee />} />
         <Route path="/about" element={<About />} />
         <Route path="/crs" element={<CRS />} />
         {/* <Route path="/speakers" element={<Speakers />} /> */}

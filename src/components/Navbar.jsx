@@ -4,14 +4,10 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [isCallsDropdownOpen, setIsCallsDropdownOpen] = useState(false);
-  const [isSubmissionDdOpen, setIsSubmissionDdOpen] = useState(false);
+  const [isCommitteeDropdownOpen, setIsCommitteeDropdownOpen] = useState(false);
   
   // Mobile state
-  const [isMobileCallsOpen, setIsMobileCallsOpen] = useState(false);
-  const [isMobileMoreOpen, setIsMobileMoreOpen] = useState(false);
-  const [isMobileSubmissionOpen, setIsMobileSubmissionOpen] = useState(false);
+  const [isMobileCommitteeOpen, setIsMobileCommitteeOpen] = useState(false);
   
   const { pathname } = useLocation();
 
@@ -21,11 +17,15 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "Registration", path: "/registration" },
     // { name: "Program Schedule", path: "/schedule" },
-    { name: "Committee", path: "/committee" },
     { name: "Call for Papers", path: "/cfp" },
     { name: "Paper Submission", path: "/submission" },
     // { name: "Keynote", path: "/speakers" },
     { name: "About", path: "/about" },
+  ];
+
+  const committeeDropdownItems = [
+    { name: "Organizing Committee", path: "/committee" },
+    { name: "International Advisory Committee", path: "/advisory-committee" },
   ];
 
   // const callsDropdownItems = [
@@ -44,9 +44,8 @@ const Navbar = () => {
 
   useEffect(() => {
     setIsOpen(false);
-    setIsMobileCallsOpen(false);
-    setIsMobileMoreOpen(false);
-    setIsMobileSubmissionOpen(false);
+    setIsMobileCommitteeOpen(false);
+    setIsCommitteeDropdownOpen(false);
   }, [pathname]);
 
   // Desktop Link Styles
@@ -111,6 +110,27 @@ const Navbar = () => {
                 {item.name}
               </NavLink>
             ))}
+
+            <div
+              className="relative"
+              onMouseEnter={() => setIsCommitteeDropdownOpen(true)}
+              onMouseLeave={() => setIsCommitteeDropdownOpen(false)}
+            >
+              <button className={dropdownBtnClasses(isCommitteeDropdownOpen)}>
+                Committee
+                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isCommitteeDropdownOpen ? 'rotate-180 text-blue-300' : ''}`} />
+              </button>
+
+              <div className={`absolute left-0 mt-2 w-72 rounded-xl shadow-2xl bg-[#1e293b] border border-slate-700 ring-1 ring-black ring-opacity-50 transform transition-all duration-200 origin-top-left ${isCommitteeDropdownOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
+                <div className="py-2">
+                  {committeeDropdownItems.map((item) => (
+                    <NavLink key={item.path} to={item.path} className={dropdownItemClasses}>
+                      {item.name}
+                    </NavLink>
+                  ))}
+                </div>
+              </div>
+            </div>
 
             {/* Submission Dropdown */}
             {/* <div 
@@ -217,25 +237,24 @@ const Navbar = () => {
             </NavLink>
           ))}
 
-          {/* Mobile Submission Accordion */}
-          {/* <div className="space-y-1 pt-2">
+          <div className="space-y-1">
             <button
-              onClick={() => setIsMobileSubmissionOpen(!isMobileSubmissionOpen)}
+              onClick={() => setIsMobileCommitteeOpen(!isMobileCommitteeOpen)}
               className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors"
             >
-              <span>Submission</span>
-              <ChevronDown className={`h-5 w-5 transform transition-transform duration-200 ${isMobileSubmissionOpen ? 'rotate-180 text-blue-400' : 'text-slate-500'}`} />
+              <span>Committee</span>
+              <ChevronDown className={`h-5 w-5 transform transition-transform duration-200 ${isMobileCommitteeOpen ? 'rotate-180 text-blue-400' : 'text-slate-500'}`} />
             </button>
-            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileSubmissionOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
+            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileCommitteeOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
               <div className="bg-black/20 rounded-lg py-2 mx-2 border border-white/5">
-                {submissionDropdownItems.map((item) => (
+                {committeeDropdownItems.map((item) => (
                   <NavLink
                     key={item.path}
                     to={item.path}
                     className={({ isActive }) =>
                       `block pl-5 pr-4 py-2.5 text-sm font-medium border-l-2 ml-3 ${
-                        isActive 
-                          ? "border-blue-500 text-blue-400 bg-white/5" 
+                        isActive
+                          ? "border-blue-500 text-blue-400 bg-white/5"
                           : "border-transparent text-slate-400 hover:text-white"
                       }`
                     }
@@ -245,67 +264,8 @@ const Navbar = () => {
                 ))}
               </div>
             </div>
-          </div> */}
+          </div>
 
-          {/* Mobile Calls Accordion */}
-          {/* <div className="space-y-1">
-            <button
-              onClick={() => setIsMobileCallsOpen(!isMobileCallsOpen)}
-              className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors"
-            >
-              <span>Calls</span>
-              <ChevronDown className={`h-5 w-5 transform transition-transform duration-200 ${isMobileCallsOpen ? 'rotate-180 text-blue-400' : 'text-slate-500'}`} />
-            </button>
-            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileCallsOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-              <div className="bg-black/20 rounded-lg py-2 mx-2 border border-white/5">
-                {callsDropdownItems.map((item) => (
-                  <NavLink
-                    key={item.path}
-                    to={item.path}
-                    className={({ isActive }) =>
-                      `block pl-5 pr-4 py-2.5 text-sm font-medium border-l-2 ml-3 ${
-                        isActive 
-                          ? "border-blue-500 text-blue-400 bg-white/5" 
-                          : "border-transparent text-slate-400 hover:text-white"
-                      }`
-                    }
-                  >
-                    {item.name}
-                  </NavLink>
-                ))}
-              </div>
-            </div>
-          </div> */}
-
-          {/* Mobile More Accordion */}
-          {/* <div className="space-y-1">
-            <button
-              onClick={() => setIsMobileMoreOpen(!isMobileMoreOpen)}
-              className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors"
-            >
-              <span>More</span>
-              <ChevronDown className={`h-5 w-5 transform transition-transform duration-200 ${isMobileMoreOpen ? 'rotate-180 text-blue-400' : 'text-slate-500'}`} />
-            </button>
-            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileMoreOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
-              <div className="bg-black/20 rounded-lg py-2 mx-2 border border-white/5">
-                {dropdownItems.map((item) => (
-                  <NavLink
-                    key={item.path}
-                    to={item.path}
-                    className={({ isActive }) =>
-                      `block pl-5 pr-4 py-2.5 text-sm font-medium border-l-2 ml-3 ${
-                        isActive 
-                          ? "border-blue-500 text-blue-400 bg-white/5" 
-                          : "border-transparent text-slate-400 hover:text-white"
-                      }`
-                    }
-                  >
-                    {item.name}
-                  </NavLink>
-                ))}
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
     </nav>
