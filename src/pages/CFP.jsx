@@ -1,6 +1,6 @@
 import { Download, Calendar, Layers, FileText, ExternalLink, BookOpen } from "lucide-react"
 import { Navbar, Footer } from "../components"
-import brochure from "../assets/ICIIS2026_Call_for_Paper.pdf" // Ensure this path is correct
+import brochure from "../assets/iciis_cfp.pdf" // Ensure this path is correct
 import TimeLine from "../components/Timeline"
 
 function CFP() {

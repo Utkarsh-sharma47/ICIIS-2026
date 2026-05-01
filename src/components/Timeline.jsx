@@ -8,8 +8,8 @@ const TimeLine = () => {
             done: false,
         },
         {   
-            // oldDate: "30 May, 2025",
-            newDate: "30 April, 2026",
+            oldDate: "30 April, 2026",
+            newDate: "15 May, 2026",
             label: "Paper Submission Deadline",
             done: false,
         },
