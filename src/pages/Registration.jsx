@@ -18,7 +18,7 @@ function Registration() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
                     { label: "Paper Submission Open", date: "01 March, 2026" },
-                    { label: "Submission Deadline", date: "30 April, 2026" },
+                    { label: "Submission Deadline", date: "15 May, 2026" },
                     { label: "Acceptance Notification", date: "30 June, 2026" },
                     { label: "Camera Ready Submission", date: "15 July, 2026" }
                 ].map((item, index) => (
