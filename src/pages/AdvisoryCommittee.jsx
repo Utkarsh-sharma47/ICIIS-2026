@@ -15,7 +15,8 @@ const advisoryCommitteeData = [
   { name: "Prof. Girijesh Prasad", dsgn: "Ulster University, UK", link: "https://www.ulster.ac.uk/staff/g-prasad", src: "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=xPw66a0AAAAJ&citpid=4" },
   { name: "Prof. Ashutosh Kumar Singh", dsgn: "Director, IIIT Bhopal, India", link: "https://www.iiitbhopal.site/aboutus/directors-desk", src: "https://www.iiitbhopal.site/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdirector.5de14359.png&w=2048&q=75" },
   { name: "Prof. Mireya Garcıa-Vazquez", dsgn: "IPN-CITEDI, Mexico", link: "https://www.citedi.ipn.mx/lineas-investigacion/investigadores/investigadores-trayectoria-garcia.html", src: "https://www.citedi.ipn.mx/assets/files/citedi/assets/uploads/8._mireya_sarai_garc_a.jpg" },
-  { name: "Prof. Vineet Kansal", dsgn: "Director, IIIT Pune, India", link: "https://www.linkedin.com/in/vineet-kansal-6528056/", src: "https://media.licdn.com/dms/image/v2/C5603AQF_Z9ye9E95QQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1642316398282?e=1778112000&v=beta&t=4j6Tu_kAs4xiGP3B20UPeGoEqIpraxJuc3bg0LvLraY" }
+  { name: "Prof. Vineet Kansal", dsgn: "Director, IIIT Pune, India", link: "https://www.iiitp.ac.in/page/director", src: "https://www.iiitp.ac.in/sites/default/files/2026-04/Director%20pic.jpeg" },
+  { name: "Prof. M. S. Gaur", dsgn: "Director, IIT Jammu, India", link: "https://www.iitjammu.ac.in/director", src: "https://iitjammu.ac.in/facultyImages/Prof_Manoj_Gaur.png" }
 ];
 
 function AdvisoryCommittee() {
