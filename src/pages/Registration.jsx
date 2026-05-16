@@ -1,6 +1,7 @@
 import { Footer, Navbar } from "../components/index.js"
 import { Calendar, AlertCircle, Mail, ArrowRight } from 'lucide-react';
 import RegistrationFees from '../components/RegistrationFees.jsx';
+import TimeLine from "../components/Timeline.jsx";
 
 function Registration() {
     return (
