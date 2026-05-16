@@ -3,13 +3,12 @@ import {StepForward} from "lucide-react"
 const TimeLine = () => {
     const FirstPhaseEvents = [
         {   
-            newDate: "01 March, 2026",
+            oldDate: "01 March, 2026",
             label: "Paper Submission Open",
-            done: false,
         },
         {   
-            oldDate: "30 April, 2026",
-            newDate: "15 May, 2026",
+            // oldDate: "30 April, 2026",
+            oldDate: "15 May, 2026",
             label: "Paper Submission Deadline",
             done: false,
         },
@@ -31,35 +30,27 @@ const TimeLine = () => {
         
     ];
 
-    // const SecondPhaseEvents = [
-    //     {   
-    //         oldDate: "07 June, 2025",
-    //         label: "Paper Submission Open",
-    //     },
-    //     {   
-    //         // oldDate: "07 July, 2025",
-    //         // oldDate: "20 July, 2025",
-    //         oldDate: "01 August, 2025",
-    //         label: "Paper Submission Deadline",
-    //     },
-    //     {   
-    //         oldDate: "31 August, 2025",
-    //         label: "Acceptance Notification",
-    //     },
-    //     {   
-    //         oldDate: "15 September, 2025",
-    //         label: "Early Bird Registration Deadline",
-    //     },
-    //     {   
-    //         oldDate: "30 September , 2025",
-    //         label: "Camera Ready Submission",
-    //     },
-    //     {
-    //         oldDate: "19-20 December, 2025",
-    //         label: "Conference Dates",
-    //         done: false,
-    //     }
-    // ];
+    const SecondPhaseEvents = [
+        {   
+            // oldDate: "07 June, 2025",
+            newDate: "16 May, 2026",
+            label: "Paper Submission Open",
+        },
+        {   
+            // oldDate: "07 July, 2025",
+            // oldDate: "20 July, 2025",
+            newDate: "15 July, 2026",
+            label: "Paper Submission Deadline",
+        },
+        {   
+            newDate: "31 August, 2026",
+            label: "Acceptance Notification",
+        },
+        {   
+            newDate: "30 September, 2026",
+            label: "Camera Ready Submission",
+        },
+    ];
 
     // const ThirdPhaseEvents = [
     //     {   
@@ -123,7 +114,7 @@ const TimeLine = () => {
                 ))} */}
                 
 
-                {/* <div className="pl-5 mb-4 relative">
+                <div className="pl-5 mb-4 relative">
                     <div className="absolute h-11 left-[14px] text-[#0054B0] transform -translate-x-full">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 80" className="w-full h-full">
                         <path 
@@ -148,7 +139,7 @@ const TimeLine = () => {
                         <p className="text-[#0054B0] font-bold">{event.newDate}</p>
                         <p className="font-bold">{event.label}</p>
                     </div>
-                ))} */}
+                ))}
                 
                 
                 <div className="pl-5 mb-4 relative">
@@ -163,7 +154,7 @@ const TimeLine = () => {
                         />
                         </svg>
                     </div>
-                    <p className="text-lg font-bold">Important Dates</p>
+                    <p className="text-lg font-bold">First Phase</p>
                 </div>   
                 {FirstPhaseEvents.map((event, index) => (
                     <div key={index} className="text-sm mb-8 pl-5 relative">

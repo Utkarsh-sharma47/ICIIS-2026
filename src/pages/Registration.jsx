@@ -1,5 +1,6 @@
 import { Footer, Navbar } from "../components/index.js"
 import { Calendar, AlertCircle, Mail, ArrowRight } from 'lucide-react';
+import RegistrationFees from '../components/RegistrationFees.jsx'; 
 
 function Registration() {
   return (
@@ -17,10 +18,10 @@ function Registration() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                    { label: "Paper Submission Open", date: "01 March, 2026" },
-                    { label: "Submission Deadline", date: "15 May, 2026" },
-                    { label: "Acceptance Notification", date: "30 June, 2026" },
-                    { label: "Camera Ready Submission", date: "15 July, 2026" }
+                    { label: "Paper Submission Open", date: "16 May, 2026" },
+                    { label: "Submission Deadline", date: "15 July, 2026" },
+                    { label: "Acceptance Notification", date: "31 August, 2026" },
+                    { label: "Camera Ready Submission", date: "30 September, 2026" }
                 ].map((item, index) => (
                     <div key={index} className="border-l-2 border-blue-100 pl-4 py-1 hover:border-blue-500 transition-colors duration-300">
                         <p className="text-sm text-slate-500 font-medium uppercase tracking-wide">{item.label}</p>
@@ -88,6 +89,9 @@ function Registration() {
                 </ul>
             </div>
         </div>
+
+        <h3 className="text-xl font-bold">Regsitration Fees Details</h3>
+        <RegistrationFees/>
 
         {/* Section 3: Terms - Compact & Clean */}
         <div className="bg-slate-50 p-6 md:p-8 rounded-lg border border-slate-200">
