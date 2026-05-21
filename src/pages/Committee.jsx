@@ -80,6 +80,12 @@ const committeeData = [
         name: "Dr. Wilfred Godfrey", 
         dsgn: "ABV-IIITM, India",
         link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.WWilfredGodfrey"
+      },
+      { 
+        src: "https://ieeemp.org/img/Dr.%20Vijayalaxmi%20Biradar.jpeg", 
+        name: "Dr. Vijayalaxmi Biradar", 
+        dsgn: "IEEE MP Section",
+        link: ""
       }
     ]
   },
@@ -274,6 +280,12 @@ const trackChairs = [
         name: "Prof. Rajesh Gupta",
         dsgn: "MNNIT Allahabad",
         link: "https://mnnit.ac.in/profile/previewp.php?id=1643"
+      },
+      {
+        src: "https://www.mnnit.ac.in/images/newstories/2017/ak_singh.jpg",
+        name: "Prof. Asheesh K. Singh",
+        dsgn: "MNNIT Allahabad, Prayagraj, India",
+        link: "https://mnnit.ac.in/profile/asheesh"
       }
     ]
   },
