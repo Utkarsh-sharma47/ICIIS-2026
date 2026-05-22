@@ -337,6 +337,12 @@ const trackChairs = [
         name: "Dr. Jatoth Deepak Naik",
         dsgn: "ABV-IIITM, India",
         link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Jatoth"
+      },
+      {
+        src: "https://www.iiitm.ac.in/images/demo/teachers/1714042630_IMG_GP.jpg",
+        name: "Dr. Gaurav Pandey",
+        dsgn: "ABV-IIITM, India",
+        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/drgaurav"
       }
     ]
   },
