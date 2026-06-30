@@ -13,7 +13,8 @@ const TimeLine = () => {
             done: false,
         },
         {   
-            newDate: "30 June, 2026",
+            oldDate: "30 June, 2026",
+            newDate:"7 July, 2026",
             label: "Acceptance Notification",
             done: false,
         },
