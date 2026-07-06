@@ -12,6 +12,7 @@ import ScrollToTop from "./components/ScrollToTop"
 import CRS from "./pages/CRS"
 import Speakers from "./pages/Speakers"
 import Attende from "./pages/Attende"
+import Oversight from "./pages/Oversight"
 function App() {
   return (
     <BrowserRouter>
@@ -28,6 +29,7 @@ function App() {
         <Route path="/crs" element={<CRS />} />
         {/* <Route path="/speakers" element={<Speakers />} /> */}
         <Route path="/attende" element={<Attende/>}/>
+        <Route path="//oversight-committee" element={<Oversight/>}/>
       </Routes>
     </BrowserRouter>
   )

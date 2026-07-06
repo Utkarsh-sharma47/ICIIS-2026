@@ -137,11 +137,26 @@ function Registration() {
 
                     {/* Registration Button */}
                     <a
-                        href="#"
+                        href="https://docs.google.com/forms/d/e/1FAIpQLSdiH4uRKpEKe00AT9a9aH4jVRMntCdIFFoxOvYdWjGYV_hI5w/viewform"
                         className="inline-flex items-center gap-2 bg-[#0f172a] hover:bg-blue-700 text-white text-sm font-medium px-6 py-3 rounded transition-all duration-300 shadow-sm hover:shadow-md"
                     >
                         Proceed to Registration Form <ArrowRight className="w-4 h-4" />
                     </a>
+                </div>
+                <hr />
+                <div>
+                    <h3 className="text-xl font-bold text-[#0f172a] mb-4 flex items-center gap-2">
+                        The account details for payment of Registration fees are given as follows:
+                    </h3>
+                    <div className="md:grid-cols-2 gap-x-8 text-xl font-semibold ">
+                        <p className="py-2"><b>Account Name:</b>  IEEE ICIIS2026</p>
+                        <p className="py-2"><b>Account Number:</b> 946210210000096</p>
+                        <p className="py-2"><b>Bank Name and Branch:</b> Bank of India, IIITM Campus, Morena Link Road, Gwalior, M.P. -474003</p>
+                        <p className="py-2"><b>Account Type:</b> Saving</p>
+                        <p className="py-2"><b>MICR Code:</b> 474013010</p>
+                        <p className="py-2"><b>IFSC Code:</b> BKID0009462</p>
+                        <p className="py-2"><b>SWIFT Code:</b> BKIDINBBGWA</p>
+                    </div>
                 </div>
 
             </div>
