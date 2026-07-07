@@ -11,7 +11,11 @@ function parseStyle(styleString) {
     }, {});
 }
 
-function Marquee({ updates }) {
+function Marquee({ updates = [] }) {
+    if (!Array.isArray(updates) || updates.length === 0) {
+        return null;
+    }
+    
     return (
         <div className="w-full bg-blue-50 overflow-hidden whitespace-nowrap relative">
             <div className="marquee-track flex gap-12 py-2 px-4 text-[#0054B0] text-sm font-medium">
