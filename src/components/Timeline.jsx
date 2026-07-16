@@ -47,7 +47,8 @@ const TimeLine = () => {
         {   
             // oldDate: "07 July, 2025",
             // oldDate: "20 July, 2025",
-            newDate: "15 July, 2026",
+            oldDate: "15 July, 2026",
+            newDate: "30 July, 2026",
             label: "Paper Submission Deadline",
         },
         {   
