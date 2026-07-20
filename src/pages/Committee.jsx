@@ -5,6 +5,17 @@ import { Footer, Navbar } from "../components/index.js";
 // --- DATA: Main Committee ---
 const committeeData = [
   {
+    title: "Patron",
+    members: [
+       { 
+        src: "https://www.iiitm.ac.in/images/demo/teachers/1650440085_Prof.-Sri-Niwas-Singh.jpg", 
+        name: "Prof. S. N. Singh", 
+        dsgn: "Director, ABV-IIITM, India",
+        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/prof-sri-niwas"
+      },
+    ]
+  },
+  {
     title: "General Chairs",
     members: [
       { 
@@ -21,8 +32,8 @@ const committeeData = [
       },
       { 
         src: "/Drmd.png", 
-        name: "Dr. Manish Dixit", 
-        dsgn: "MITS Gwalior, India",
+        name: "Prof. Manish Dixit", 
+        dsgn: "ChairPerson (Elected), IEEE MP Section, MITS Gwalior, India",
         link: "https://web.mitsgwalior.in/faculty-profiles-cse-2/dr-manish-dixit-2"
       },
     ]
@@ -69,6 +80,12 @@ const committeeData = [
         name: "Dr. Wilfred Godfrey", 
         dsgn: "ABV-IIITM, India",
         link: "https://iiitm.ac.in/staff/faculty/dr-w-wilfred-godfrey"
+      },
+      { 
+        src: "https://ieeemp.org/img/Dr.%20Vijayalaxmi%20Biradar.jpeg", 
+        name: "Dr. Vijayalaxmi Biradar", 
+        dsgn: "IEEE MP Section",
+        link: ""
       }
     ]
   },
@@ -185,6 +202,12 @@ const committeeData = [
         name: "Dr. Anjali", 
         dsgn: "ABV-IIITM, India",
         link: "https://iiitm.ac.in/staff/faculty/dr-anjali"
+      },
+      { 
+        src: "https://illinois-state-dm-s3.imgix.net/vdevabh/pci/Vijay%20profile%20pic-1.jpg?auto=format&w=150&h=225&crop=faces&fit=crop&fm=jpeg&q=90", 
+        name: "Prof. Vijay Devabhaktuni", 
+        dsgn: "Illinois State University, USA",
+        link: "https://illinois-state-dm-s3.imgix.net/vdevabh/pci/Vijay%20profile%20pic-1.jpg?auto=format&w=150&h=225&crop=faces&fit=crop&fm=jpeg&q=90"
       }
     ]
   }
@@ -253,10 +276,16 @@ const trackChairs = [
         link: "https://iiitm.ac.in/staff/faculty/dr-neelesh-yadav"
       },
       {
-        src: "https://mnnit.ac.in/userprofile/uploads/89091-IMG-20220826-WA0010.jpg",
+        src: "https://www.mnnit.ac.in/images/newstories/2017/R_gupta.jpg",
         name: "Prof. Rajesh Gupta",
         dsgn: "MNNIT Allahabad",
         link: "https://mnnit.ac.in/profile/previewp.php?id=1643"
+      },
+      {
+        src: "https://www.mnnit.ac.in/images/newstories/2017/ak_singh.jpg",
+        name: "Prof. Asheesh K. Singh",
+        dsgn: "MNNIT Allahabad, Prayagraj, India",
+        link: "https://mnnit.ac.in/profile/asheesh"
       }
     ]
   },
@@ -308,6 +337,12 @@ const trackChairs = [
         name: "Dr. Jatoth Deepak Naik",
         dsgn: "ABV-IIITM, India",
         link: "https://iiitm.ac.in/staff/faculty/dr-jatoth-deepak-naik"
+      },
+      {
+        src: "https://www.iiitm.ac.in/images/demo/teachers/1714042630_IMG_GP.jpg",
+        name: "Dr. Gaurav Pandey",
+        dsgn: "ABV-IIITM, India",
+        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/drgaurav"
       }
     ]
   },
