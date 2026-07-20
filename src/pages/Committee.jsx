@@ -8,10 +8,10 @@ const committeeData = [
     title: "Patron",
     members: [
        { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1650440085_Prof.-Sri-Niwas-Singh.jpg", 
+        src: "/committee/sn-singh.jpg", 
         name: "Prof. S. N. Singh", 
         dsgn: "Director, ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/prof-sri-niwas"
+        link: "https://iiitm.ac.in/staff/faculty/prof-sri-niwas-singh"
       },
     ]
   },
@@ -339,10 +339,10 @@ const trackChairs = [
         link: "https://iiitm.ac.in/staff/faculty/dr-jatoth-deepak-naik"
       },
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1714042630_IMG_GP.jpg",
+        src: "/committee/gaurav-pandey.jpg",
         name: "Dr. Gaurav Pandey",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/drgaurav"
+        link: "https://iiitm.ac.in/staff/faculty/dr-gaurav-pandey"
       }
     ]
   },
