@@ -26,6 +26,7 @@ const Navbar = () => {
   const committeeDropdownItems = [
     { name: "Organizing Committee", path: "/committee" },
     { name: "International Advisory Committee", path: "/advisory-committee" },
+    { name: "Oversight Committee", path: "/oversight-committee" },
   ];
 
   // const callsDropdownItems = [

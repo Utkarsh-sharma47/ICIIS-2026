@@ -3,6 +3,13 @@ import Marquee from "./Marquee"
 import { CalendarDays, Layers } from 'lucide-react';
 
 function MainSection() {
+    const marqueeUpdates = [
+        {
+            text: "First Phase Paper Decision emails have been sent to the Authors.",
+            url: null
+        }
+    ];
+
     const RegularTracks = [
         {
             heading: "Track 1: Image, Signal & Artificial Intelligence",
@@ -40,6 +47,9 @@ function MainSection() {
 
     return (
         <div className="font-sans text-slate-800 py-6 px-4 md:px-6 lg:px-8 max-w-7xl mx-auto">
+
+
+            <Marquee updates={marqueeUpdates} />
             
             {/* --- Welcome Section --- */}
             <div className="mb-8 border-b border-slate-200 pb-6">
@@ -48,7 +58,7 @@ function MainSection() {
                 </h1>
                 <div className="text-base text-slate-700 leading-snug text-justify max-w-5xl">
                     <p>
-                        <span className="font-bold text-slate-900">ICIIS 2026 covers a wide range of engineering disciplines</span>, with added focus on sustainability and trustworthiness. The conference is being organised to function as a platform for dissemination of recent high-quality research work. It covers the wide domain of Computer Science, Electronics, and Electrical Engineering and will provide a means to exchange innovative ideas and recent advances among researchers from academia and industry.
+                        <span className="font-bold text-slate-900">ICIIS 2026 covers a wide range of engineering disciplines</span>, with added focus on sustainability and trustworthiness. This conference (<a href="https://conferences.ieee.org/conferences_events/conferences/conferencedetails/71472" className="text-blue-600 underline font-semibold">IEEE Conference ID: 71472</a>) is being organised to function as a platform for dissemination of recent high-quality research work. It covers the wide domain of Computer Science, Electronics, and Electrical Engineering and will provide a means to exchange innovative ideas and recent advances among researchers from academia and industry.
                     </p>
                 </div>
             </div>
@@ -96,7 +106,7 @@ function MainSection() {
 
                 {/* --- Right Column: Sidebar (Sticky Timeline) --- */}
                 <div className="hidden md:block md:w-[30%]">
-                    <div className="sticky top-24">
+                    <div className="sticky top-24 space-y-5">
                         <div className="bg-slate-50 rounded-lg p-5 border border-slate-200 shadow-sm">
                             <div className="flex items-center gap-2 mb-4 border-b border-slate-200 pb-2">
                                 <CalendarDays className="w-5 h-5 text-blue-600" />
@@ -107,6 +117,44 @@ function MainSection() {
                             <div className="text-sm">
                                 <TimeLine />
                             </div>
+                        </div>
+
+                        {/* Conference Stats */}
+                        <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-5 border border-blue-200 shadow-sm">
+                            <h3 className="text-lg font-bold text-[#0f172a] mb-4">Conference Stats</h3>
+                            <div className="space-y-3">
+                                <div className="flex justify-between items-center p-3 bg-white rounded border border-blue-100">
+                                    <span className="text-slate-700 font-medium">Conference Tracks</span>
+                                    <span className="text-2xl font-bold text-blue-600">8</span>
+                                </div>
+                                <div className="flex justify-between items-center p-3 bg-white rounded border border-blue-100">
+                                    <span className="text-slate-700 font-medium">Research Areas</span>
+                                    <span className="text-2xl font-bold text-blue-600">25+</span>
+                                </div>
+                                <div className="flex justify-between items-center p-3 bg-white rounded border border-blue-100">
+                                    <span className="text-slate-700 font-medium">Disciplines</span>
+                                    <span className="text-2xl font-bold text-blue-600">3</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Quick Info */}
+                        <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-lg p-5 border border-green-200 shadow-sm">
+                            <h3 className="text-lg font-bold text-[#0f172a] mb-4">Quick Info</h3>
+                            <ul className="space-y-2 text-sm text-slate-700">
+                                <li className="flex items-start gap-2">
+                                    <span className="text-green-600 font-bold mt-0.5">✓</span>
+                                    <span><strong>IEEE Conference ID:</strong> 71472</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="text-green-600 font-bold mt-0.5">✓</span>
+                                    <span><strong>Focus:</strong> Sustainability & Trustworthiness</span>
+                                </li>
+                                <li className="flex items-start gap-2">
+                                    <span className="text-green-600 font-bold mt-0.5">✓</span>
+                                    <span><strong>Platform:</strong> Research Dissemination</span>
+                                </li>
+                            </ul>
                         </div>
                     </div>
                 </div>
