@@ -8,16 +8,16 @@ const committeeData = [
     title: "General Chairs",
     members: [
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1760430650_Photo-KVA-side.jpg", 
+        src: "/committee/kv-arya.png", 
         name: "Prof. K.V. Arya", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.KVArya"
+        link: "https://iiitm.ac.in/staff/faculty/prof-karm-veer-arya"
       },
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1692009722_WhatsApp%20Image%202023-08-14%20at%2015.46.28.jpeg", 
+        src: "/committee/shashikala.jpeg", 
         name: "Prof. Shashikala Tapaswi", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Prof.Shashikala"
+        link: "https://iiitm.ac.in/staff/faculty/prof-shashikala-tapaswi"
       },
       { 
         src: "/Drmd.png", 
@@ -37,10 +37,10 @@ const committeeData = [
         link: ""
       },
       { 
-        src: "https://www.iiitm.ac.in/images/Photo.jpg", 
+        src: "/committee/vinod-kumar.jpg", 
         name: "Dr. Vinod Kumar Jain", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/dr-vinod-kumar-jain"
+        link: "https://iiitm.ac.in/staff/faculty/dr-vinod-kumar-jain"
       }
     ]
   },
@@ -48,10 +48,10 @@ const committeeData = [
     title: "Conference Secretary",
     members:[
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1689745249_photo2.jpg", 
+        src: "/committee/rahul-kala.jpg", 
         name: "Dr. Rahul Kala", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Rahul" 
+        link: "https://iiitm.ac.in/staff/faculty/drrahul-kala" 
       }
     ]
   },
@@ -59,16 +59,16 @@ const committeeData = [
     title: "Finance Chairs",
     members: [
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1689745249_photo2.jpg", 
+        src: "/committee/rahul-kala.jpg", 
         name: "Dr. Rahul Kala", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Rahul" 
+        link: "https://iiitm.ac.in/staff/faculty/drrahul-kala" 
       },
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1533544986_godfrey_pic.jpg", 
+        src: "/committee/wilfred.jpg", 
         name: "Dr. Wilfred Godfrey", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.WWilfredGodfrey"
+        link: "https://iiitm.ac.in/staff/faculty/dr-w-wilfred-godfrey"
       }
     ]
   },
@@ -76,34 +76,34 @@ const committeeData = [
     title: "Technical Program Chairs (TPC)",
     members: [
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1533545473_dranuraj.jpg", 
+        src: "/committee/anuraj-singh.jpg", 
         name: "Dr. Anuraj Singh", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.AnurajSingh"
+        link: "https://iiitm.ac.in/staff/faculty/dr-anuraj-singh"
       },
       { 
-        src: "https://www.iiitm.ac.in/images/Photo.jpg", 
+        src: "/committee/vinod-kumar.jpg", 
         name: "Dr. Vinod Kumar Jain", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/dr-vinod-kumar-jain"
+        link: "https://iiitm.ac.in/staff/faculty/dr-vinod-kumar-jain"
       },
       { 
-        src: "https://www.iiitm.ac.in/images/IMG_20191213_010559.jpg", 
+        src: "/committee/manoj.jpg", 
         name: "Dr. Manoj Singh Parihar", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/dr-manoj-singh-parihar"
+        link: "https://iiitm.ac.in/staff/faculty/dr-manoj-singh-parihar"
       },
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1533546077_drsaumya.jpg", 
+        src: "/committee/saumya.jpg", 
         name: "Dr. Saumya Bhadauria", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.SaumyaBhadauria"
+        link: "https://iiitm.ac.in/staff/faculty/dr-saumya-bhadauria"
       },
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1677819537_SNK.png", 
+        src: "/committee/sunil.png", 
         name: "Dr. Sunil Kumar", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.SunilKumar"
+        link: "https://iiitm.ac.in/staff/faculty/dr-sunil-kumar"
       }
     ]
   },
@@ -111,22 +111,22 @@ const committeeData = [
     title: "Publicity & Website Chairs",
     members: [
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1533546946_kaushalg.jpg", 
+        src: "/committee/gaurav-kaushal.jpg", 
         name: "Dr. Gaurav Kaushal", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.GauravKaushal"
+        link: "https://iiitm.ac.in/staff/faculty/dr-gaurav-kaushal"
       },
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1677492702_PIC_Mahendra%20K.%20Shukla.jpg", 
+        src: "/committee/mahendra.jpg", 
         name: "Dr. Mahendra Shukla", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Mahendra"
+        link: "https://iiitm.ac.in/staff/faculty/dr-mahendra-kumar-shukla"
       },
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1753786677_VKS.png", 
+        src: "/committee/vivek-kumar-singh.png", 
         name: "Dr. Vivek Kumar Singh", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.VivekKumar"
+        link: "https://iiitm.ac.in/staff/faculty/drvivek-kumar-singh"
       },
       { 
         src: "https://static.wixstatic.com/media/e26087_5e05a06b9abf4ca1955a2f14850073d6~mv2.jpg/v1/crop/x_0,y_19,w_302,h_220/fill/w_350,h_254,al_c,lg_1,q_80,enc_avif,quality_auto/rana.jpg", 
@@ -140,22 +140,22 @@ const committeeData = [
     title: "Publication Chairs",
     members: [
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1533094412_jdhar.jpg", 
+        src: "/committee/joydip-dhar.png", 
         name: "Prof. Joydip Dhar", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.JoydeepDhar"
+        link: "https://iiitm.ac.in/staff/faculty/prof-joydip-dhar"
       },
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1677819537_SNK.png", 
+        src: "/committee/sunil.png", 
         name: "Dr. Sunil Kumar", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.SunilKumar"
+        link: "https://iiitm.ac.in/staff/faculty/dr-sunil-kumar"
       },
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1723455388_Vijay_Pic.jpg", 
+        src: "/committee/vijaypal.jpg", 
         name: "Dr. Vijay Pal Rathore", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Vijaypal"
+        link: "https://iiitm.ac.in/staff/faculty/dr-vijaypal-singh-rathor"
       },
       
     ]
@@ -164,16 +164,16 @@ const committeeData = [
     title: "Registration Chairs",
     members: [
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1761456376_formal_photo1.PNG", 
+        src: "/committee/rohit-kumar.png", 
         name: "Dr. Rohit Kumar", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Rohit"
+        link: "https://iiitm.ac.in/staff/faculty/dr-rohit-kumar"
       },
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1753878346_Dr.%20Bahnu%20Profile%20Pic%20for%20Faculty.jpeg", 
+        src: "/committee/bhanu.jpeg", 
         name: "Dr. Bhanu Chander", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Bhanu"
+        link: "https://iiitm.ac.in/staff/faculty/drbhanu-chander"
       }
     ]
   },
@@ -181,10 +181,10 @@ const committeeData = [
     title: "International Relation Chairs",
     members: [
       { 
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1678951996_Profile_Pic.jpg", 
+        src: "/committee/anjali.jpg", 
         name: "Dr. Anjali", 
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/dr-anjali"
+        link: "https://iiitm.ac.in/staff/faculty/dr-anjali"
       }
     ]
   }
@@ -196,10 +196,10 @@ const trackChairs = [
     track: "Track 1: Image, Signal & Artificial Intelligence",
     members: [
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1677819537_SNK.png",
+        src: "/committee/sunil.png",
         name: "Dr. Sunil Kumar",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.SunilKumar"
+        link: "https://iiitm.ac.in/staff/faculty/dr-sunil-kumar"
       },
       {
         src: "https://csed.thapar.edu/files/microfaculty/21/17307845311428.jpg",
@@ -213,16 +213,16 @@ const trackChairs = [
     track: "Track 2: Embedded & Intelligent Systems",
     members: [
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1690362693_Biswabandhu%20Jana.jpg",
+        src: "/committee/biswabandhu-jana.jpg",
         name: "Dr. Biswabandhu Jana",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Biswabandhu"
+        link: "https://iiitm.ac.in/staff/faculty/dr-biswabandhu-jana"
       },
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1761456376_formal_photo1.PNG",
+        src: "/committee/rohit-kumar.png",
         name: "Dr. Rohit Kumar",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Rohit"
+        link: "https://iiitm.ac.in/staff/faculty/dr-rohit-kumar"
       }
     ]
   },
@@ -230,16 +230,16 @@ const trackChairs = [
     track: "Track 3: Communication & Information Technologies",
     members: [
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1753786677_VKS.png",
+        src: "/committee/vivek-kumar-singh.png",
         name: "Dr. Vivek Kumar Singh",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.VivekKumar"
+        link: "https://iiitm.ac.in/staff/faculty/drvivek-kumar-singh"
       },
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1753878346_Dr.%20Bahnu%20Profile%20Pic%20for%20Faculty.jpeg",
+        src: "/committee/bhanu.jpeg",
         name: "Dr. G. Bhanu Chander",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Bhanu"
+        link: "https://iiitm.ac.in/staff/faculty/drbhanu-chander"
       }
     ]
   },
@@ -247,10 +247,10 @@ const trackChairs = [
     track: "Track 4: Power, Energy & High Voltage Engineering",
     members: [
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1767704998_Dr%20Neelesh.png",
+        src: "/committee/neelesh-yadav.png",
         name: "Dr. Neelesh Yadav",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/DrNeelesh"
+        link: "https://iiitm.ac.in/staff/faculty/dr-neelesh-yadav"
       },
       {
         src: "https://mnnit.ac.in/userprofile/uploads/89091-IMG-20220826-WA0010.jpg",
@@ -264,16 +264,16 @@ const trackChairs = [
     track: "Track 5: Control, Robotics & Automation",
     members: [
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1533544986_godfrey_pic.jpg",
+        src: "/committee/wilfred.jpg",
         name: "Dr. Wilfred Godfrey",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.WWilfredGodfrey"
+        link: "https://iiitm.ac.in/staff/faculty/dr-w-wilfred-godfrey"
       },
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1689745249_photo2.jpg",
+        src: "/committee/rahul-kala.jpg",
         name: "Dr. Rahul Kala",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Rahul"
+        link: "https://iiitm.ac.in/staff/faculty/drrahul-kala"
       }
     ]
   },
@@ -281,16 +281,16 @@ const trackChairs = [
     track: "Track 6: FPGA, EDA Tools & VLSI Design",
     members: [
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1533546946_kaushalg.jpg",
+        src: "/committee/gaurav-kaushal.jpg",
         name: "Dr. Gaurav Kaushal",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.GauravKaushal"
+        link: "https://iiitm.ac.in/staff/faculty/dr-gaurav-kaushal"
       },
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1723455388_Vijay_Pic.jpg",
+        src: "/committee/vijaypal.jpg",
         name: "Dr. Vijaypal Singh Rathore",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Vijaypal"
+        link: "https://iiitm.ac.in/staff/faculty/dr-vijaypal-singh-rathor"
       }
     ]
   },
@@ -298,16 +298,16 @@ const trackChairs = [
     track: "Track 7: RF, Microwave & Photonics",
     members: [
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1668597418_DSC_1271.JPG",
+        src: "/committee/pinku.jpeg",
         name: "Dr. Pinku Ranjan",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.PINKURANJAN"
+        link: "https://iiitm.ac.in/staff/faculty/dr-pinku-ranjan"
       },
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1767704208_Dr.%20Deepak.jpg",
+        src: "/committee/jatoth.jpg",
         name: "Dr. Jatoth Deepak Naik",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.Jatoth"
+        link: "https://iiitm.ac.in/staff/faculty/dr-jatoth-deepak-naik"
       }
     ]
   },
@@ -315,16 +315,16 @@ const trackChairs = [
     track: "Track 8: Data-Driven Technologies",
     members: [
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1533545473_dranuraj.jpg",
+        src: "/committee/anuraj-singh.jpg",
         name: "Dr. Anuraj Singh",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.AnurajSingh"
+        link: "https://iiitm.ac.in/staff/faculty/dr-anuraj-singh"
       },
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1767702555_Yannam.jpg",
+        src: "/committee/ramanjaneyulu.jpg",
         name: "Dr. V. Ramanjaneyulu Yannam",
         dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.VRamanjaneyulu"
+        link: "https://iiitm.ac.in/staff/faculty/drv-ramanjaneyulu-yannam"
       }
     ]
   }
