@@ -4,7 +4,7 @@ import { Footer, Navbar } from "../components/index.js";
 
 const advisoryCommitteeData = [
   { name: "Prof. Manish Gaur", dsgn: "Director, IIIT Una, India", link: "https://iiitu.ac.in/schools/soc/faculty/66bbc33dbf272288f00f287b", src: "https://cdn.iiitu.ac.in/uploads/faculty/Manish-Gaur1727002407586-268891842.webp" },
-  { name: "Prof. C. C. Tripathi", dsgn: "Director, NITTTR Bhopal, India", link: "https://www.linkedin.com/in/c-c-tripathi-64109a20b/", src: "https://media.licdn.com/dms/image/v2/D4D03AQFYc5VRN81A_w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730460333740?e=2147483647&v=beta&t=av8nah74W5XXSl78PgxrfOVDALiR1mQY3MzK629CkrY" },
+  { name: "Prof. C. C. Tripathi", dsgn: "Director, NITTTR Bhopal, India", link: "https://www.linkedin.com/in/c-c-tripathi-64109a20b/", src: "/committee/cc-tripathi.jpg" },
   { name: "Prof. A. Elayaperumal", dsgn: "Director, NIT Nagaland, India", link: "https://www.nitnagaland.ac.in/index.php/directordesk/directorprofile", src: "https://www.nitnagaland.ac.in/templates/g5_helium/images/testimonials/DIRECTOR/Director_ElayaPerumal.jpeg" },
   { name: "Prof. Sunil Kumar", dsgn: "San Diego State University, USA", link: "https://electrical.sdsu.edu/people/sunil-kumar", src: "https://electrical.sdsu.edu/_resources/images/headshots/sunil-kumar.jpg" },
   { name: "Prof. Humaira Nisar", dsgn: "Universiti Tunku Abdul Rahman, Malaysia", link: "https://www2.utar.edu.my/cv/index.jsp?cv=humaira&reqPageId=aboutMe", src: "https://www2.utar.edu.my/getPic.jsp?fkey=E10011" },
@@ -13,10 +13,10 @@ const advisoryCommitteeData = [
   { name: "Prof. Ciro R. Rodriguez", dsgn: "Universidad Nacional Mayor de San Marcos, Peru", link: "https://scholar.google.com/citations?user=mcbgk1wAAAAJ&hl=es", src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRc0YNR-YMf3y-L9mLaGYFg6aM888NxgLTLVA&s" },
   { name: "Prof. Dharmendra Singh", dsgn: "Director, IIIT Vadodara, India", link: "https://iiitvadodara.ac.in/director.php", src: "https://iiitvadodara.ac.in/assets/images/pds.png" },
   { name: "Prof. Girijesh Prasad", dsgn: "Ulster University, UK", link: "https://www.ulster.ac.uk/staff/g-prasad", src: "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=xPw66a0AAAAJ&citpid=4" },
-  { name: "Prof. Ashutosh Kumar Singh", dsgn: "Director, IIIT Bhopal, India", link: "https://www.iiitbhopal.site/aboutus/directors-desk", src: "https://media.licdn.com/dms/image/v2/C5603AQFh9852CwHMzA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516591202806?e=2147483647&v=beta&t=5VflulbLwxGezjvB2xyi17CYEosW0aLMTvLK9nzrnWc" },
+  { name: "Prof. Ashutosh Kumar Singh", dsgn: "Director, IIIT Bhopal, India", link: "https://scholar.google.com/citations?user=1pBXMOgAAAAJ&hl=en", src: "/committee/ashutosh-kumar-singh.jpg" },
   { name: "Prof. Mireya Garcıa-Vazquez", dsgn: "IPN-CITEDI, Mexico", link: "https://www.citedi.ipn.mx/lineas-investigacion/investigadores/investigadores-trayectoria-garcia.html", src: "https://www.citedi.ipn.mx/assets/files/citedi/assets/uploads/8._mireya_sarai_garc_a.jpg" },
-  { name: "Prof. Vineet Kansal", dsgn: "Director, IIIT Pune, India", link: "https://www.iiitp.ac.in/page/director", src: "https://www.iiitp.ac.in/sites/default/files/2026-04/Director%20pic.jpeg" },
-  { name: "Prof. M. S. Gaur", dsgn: "Director, IIT Jammu, India", link: "https://www.iitjammu.ac.in/director", src: "https://iitjammu.ac.in/facultyImages/Prof_Manoj_Gaur.png" }
+  { name: "Prof. Vineet Kansal", dsgn: "Director, IIIT Pune, India", link: "https://www.iiitp.ac.in/administration/director", src: "/committee/vineet.jpeg" },
+  { name: "Prof. M. S. Gaur", dsgn: "Director, IIT Jammu, India", link: "https://www.linkedin.com/in/manoj-gaur-8270614/", src: "/committee/manoj-singh.jpg" }
 ];
 
 function AdvisoryCommittee() {
