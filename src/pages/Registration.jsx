@@ -2,6 +2,7 @@ import { Footer, Navbar } from "../components/index.js"
 import { Calendar, AlertCircle, Mail, ArrowRight } from 'lucide-react';
 import RegistrationFees from '../components/RegistrationFees.jsx';
 import TimeLine from "../components/Timeline.jsx";
+import qrCode from "../assets/qr.png";
 
 function Registration() {
     return (
@@ -148,14 +149,24 @@ function Registration() {
                     <h3 className="text-xl font-bold text-[#0f172a] mb-4 flex items-center gap-2">
                         The account details for payment of Registration fees are given as follows:
                     </h3>
-                    <div className="md:grid-cols-2 gap-x-8 text-xl font-semibold ">
-                        <p className="py-2"><b>Account Name:</b>  IEEE ICIIS2026</p>
-                        <p className="py-2"><b>Account Number:</b> 946210210000096</p>
-                        <p className="py-2"><b>Bank Name and Branch:</b> Bank of India, IIITM Campus, Morena Link Road, Gwalior, M.P. -474003</p>
-                        <p className="py-2"><b>Account Type:</b> Saving</p>
-                        <p className="py-2"><b>MICR Code:</b> 474013010</p>
-                        <p className="py-2"><b>IFSC Code:</b> BKID0009462</p>
-                        <p className="py-2"><b>SWIFT Code:</b> BKIDINBBGWA</p>
+                    <div className="grid gap-8 md:grid-cols-[1.2fr_0.8fr] items-start">
+                        <div className="text-xl font-semibold">
+                            <p className="py-2"><b>Account Name:</b>  IEEE ICIIS2026</p>
+                            <p className="py-2"><b>Account Number:</b> 946210210000096</p>
+                            <p className="py-2"><b>Bank Name and Branch:</b> Bank of India, IIITM Campus, Morena Link Road, Gwalior, M.P. -474003</p>
+                            <p className="py-2"><b>Account Type:</b> Saving</p>
+                            <p className="py-2"><b>MICR Code:</b> 474013010</p>
+                            <p className="py-2"><b>IFSC Code:</b> BKID0009462</p>
+                            <p className="py-2"><b>SWIFT Code:</b> BKIDINBBGWA</p>
+                        </div>
+                        <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm">
+                            <p className="text-sm font-semibold text-slate-700 mb-3">Scan QR for payment</p>
+                            <img
+                                src={qrCode}
+                                alt="Payment QR code"
+                                className="w-full max-w-[240px] mx-auto rounded-lg border border-slate-200 bg-white p-2"
+                            />
+                        </div>
                     </div>
                 </div>
 

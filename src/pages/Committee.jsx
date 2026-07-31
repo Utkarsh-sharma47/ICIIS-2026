@@ -356,10 +356,10 @@ const trackChairs = [
         link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.AnurajSingh"
       },
       {
-        src: "https://www.iiitm.ac.in/images/demo/teachers/1767702555_Yannam.jpg",
-        name: "Dr. V. Ramanjaneyulu Yannam",
-        dsgn: "ABV-IIITM, India",
-        link: "https://www.iiitm.ac.in/index.php/en/component/splms/teacher/Dr.VRamanjaneyulu"
+        src: "https://www.gla.ac.in/Uploads/faculty/6largefrt_Ashish-Sharma-Large.webp",
+        name: "Dr. Ashish Sharma",
+        dsgn: "GLA University, Mathura",
+        link: "https://www.gla.ac.in/"
       }
     ]
   }
