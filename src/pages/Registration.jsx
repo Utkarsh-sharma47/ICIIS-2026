@@ -2,7 +2,7 @@ import { Footer, Navbar } from "../components/index.js"
 import { Calendar, AlertCircle, Mail, ArrowRight } from 'lucide-react';
 import RegistrationFees from '../components/RegistrationFees.jsx';
 import TimeLine from "../components/Timeline.jsx";
-import qrCode from "../assets/qr.png";
+import qrCode from "../assets/qrcode.png";
 
 function Registration() {
     return (
