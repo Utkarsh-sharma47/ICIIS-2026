@@ -356,7 +356,7 @@ const trackChairs = [
         link: "https://iiitm.ac.in/staff/faculty/dr-anuraj-singh"
       },
       {
-        src: "https://www.gla.ac.in/Uploads/faculty/6largefrt_Ashish-Sharma-Large.webp",
+        src: "https://www.gla.ac.in/Uploads/faculty/180largefrt_Ashish-Sharma-Large.webp",
         name: "Dr. Ashish Sharma",
         dsgn: "GLA University, Mathura",
         link: "https://www.gla.ac.in/"
