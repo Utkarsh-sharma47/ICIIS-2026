@@ -16,7 +16,8 @@ const advisoryCommitteeData = [
   { name: "Prof. Ashutosh Kumar Singh", dsgn: "Director, IIIT Bhopal, India", link: "https://scholar.google.com/citations?user=1pBXMOgAAAAJ&hl=en", src: "/committee/ashutosh-kumar-singh.jpg" },
   { name: "Prof. Mireya Garcıa-Vazquez", dsgn: "IPN-CITEDI, Mexico", link: "https://www.citedi.ipn.mx/lineas-investigacion/investigadores/investigadores-trayectoria-garcia.html", src: "https://www.citedi.ipn.mx/assets/files/citedi/assets/uploads/8._mireya_sarai_garc_a.jpg" },
   { name: "Prof. Vineet Kansal", dsgn: "Director, IIIT Pune, India", link: "https://www.iiitp.ac.in/administration/director", src: "/committee/vineet.jpeg" },
-  { name: "Prof. M. S. Gaur", dsgn: "Director, IIT Jammu, India", link: "https://www.linkedin.com/in/manoj-gaur-8270614/", src: "/committee/manoj-singh.jpg" }
+  { name: "Prof. M. S. Gaur", dsgn: "Director, IIT Jammu, India", link: "https://www.linkedin.com/in/manoj-gaur-8270614/", src: "/committee/manoj-singh.jpg" },
+  { name: "Dr. Ashish Sharma", dsgn: "Professor, Department of Computer Science and Engineering, Medicaps University, Indore", link: "https://www.linkedin.com/in/dr-ashish-sharma-330141429/", src: "https://media.licdn.com/dms/image/v2/D5603AQF9PwP__rROwg/profile-displayphoto-scale_200_200/B56Z_2m8QQKEAc-/0/1786548832672?e=1788998400&v=beta&t=KD17frLwmgEJNERXSpr0_8_IlZTdlVYzpwdfRKNyzEY"}
 ];
 
 function AdvisoryCommittee() {
