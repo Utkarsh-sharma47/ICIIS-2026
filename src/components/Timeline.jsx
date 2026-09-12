@@ -57,7 +57,13 @@ const TimeLine = () => {
             label: "Acceptance Notification",
         },
         {
+            // oldDate: "15 July, 2026",
             newDate: "30 September, 2026",
+            label: "Early Bird Registration Deadline",
+            done: false,
+        },
+        {
+            newDate: "10 October, 2026",
             label: "Camera Ready Submission",
         },
     ];
