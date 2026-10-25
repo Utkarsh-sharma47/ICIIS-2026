@@ -24,6 +24,7 @@ function HeroSection() {
     { name: "Call for Papers", path: "/cfp" },
     { name: "Paper Submission", path: "/submission" },
     { name: "Keynote Speakers", path: "/keynote" },
+    { name: "Accommodation", path: "/attende" },
     { name: "About", path: "/about" }
   ];
 
@@ -113,17 +114,17 @@ function HeroSection() {
 
         <div className="relative z-10 flex-grow flex flex-col justify-center items-center px-4 w-full max-w-7xl mx-auto py-12">
           <div className="animate-fade-in-up flex flex-col items-center w-full">
-            
+
             {/* --- MAIN LOGO (Top) --- */}
             <div className="mb-8 transition-transform duration-500 hover:scale-105">
-               {/* White Badge Container to blend the logo background */}
-               <div className="bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-[0_0_30px_rgba(255,255,255,0.2)] border border-white/40">
-                 <img 
-                   src="/iciis_logo.png" 
-                   alt="ICIIS Logo" 
-                   className="h-24 md:h-32 lg:h-36 w-auto object-contain" 
-                 />
-               </div>
+              {/* White Badge Container to blend the logo background */}
+              <div className="bg-white/95 backdrop-blur-sm p-4 rounded-2xl shadow-[0_0_30px_rgba(255,255,255,0.2)] border border-white/40">
+                <img
+                  src="/iciis_logo.png"
+                  alt="ICIIS Logo"
+                  className="h-24 md:h-32 lg:h-36 w-auto object-contain"
+                />
+              </div>
             </div>
 
             {/* --- TEXT CONTENT --- */}
@@ -202,18 +203,18 @@ function HeroSection() {
                   <img
                     src={ieee_logo}
                     alt="IEEE Logo"
-                    className="h-8 md:h-12 lg:h-14 w-auto object-contain" 
-                    // No invert filter here, so it stays Blue
+                    className="h-8 md:h-12 lg:h-14 w-auto object-contain"
+                  // No invert filter here, so it stays Blue
                   />
                   {/* Vertical Separator */}
                   <div className="w-px h-10 bg-slate-300"></div>
-                  
+
                   <img
                     src={iiit_logo}
                     alt="IIIT Logo"
                     className="h-10 md:h-14 lg:h-16 w-auto object-contain"
                   />
-                  
+
                   {/* Vertical Separator */}
                   <div className="w-px h-10 bg-slate-300"></div>
 

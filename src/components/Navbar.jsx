@@ -5,10 +5,10 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isCommitteeDropdownOpen, setIsCommitteeDropdownOpen] = useState(false);
-  
+
   // Mobile state
   const [isMobileCommitteeOpen, setIsMobileCommitteeOpen] = useState(false);
-  
+
   const { pathname } = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
@@ -20,6 +20,7 @@ const Navbar = () => {
     { name: "Call for Papers", path: "/cfp" },
     { name: "Paper Submission", path: "/submission" },
     { name: "Keynote Speakers", path: "/keynote" },
+    { name: "Accommodation", path: "/attende" },
     { name: "About", path: "/about" },
   ];
 
@@ -40,7 +41,7 @@ const Navbar = () => {
 
   // const submissionDropdownItems = [
   //   { name: "Paper Submission", path: "/submission" },
-    // { name: "Camera Ready Submission", path: "/crs" },
+  // { name: "Camera Ready Submission", path: "/crs" },
   // ];
 
   useEffect(() => {
@@ -51,42 +52,39 @@ const Navbar = () => {
 
   // Desktop Link Styles
   const navLinkClasses = ({ isActive }) =>
-    `px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 tracking-wide ${
-      isActive 
-        ? "text-blue-400 bg-blue-900/30 shadow-[0_0_10px_rgba(59,130,246,0.1)] border border-blue-500/20" 
-        : "text-slate-300 hover:text-white hover:bg-white/5"
+    `px-3 py-2 rounded-md text-sm font-medium transition-all duration-300 tracking-wide ${isActive
+      ? "text-blue-400 bg-blue-900/30 shadow-[0_0_10px_rgba(59,130,246,0.1)] border border-blue-500/20"
+      : "text-slate-300 hover:text-white hover:bg-white/5"
     }`;
 
   // Desktop Dropdown Button Styles
   const dropdownBtnClasses = (isOpen) =>
-    `px-3 py-2 rounded-md text-sm font-medium inline-flex items-center gap-1.5 transition-all duration-300 tracking-wide ${
-      isOpen 
-        ? "text-blue-400 bg-blue-900/30" 
-        : "text-slate-300 hover:text-white hover:bg-white/5"
+    `px-3 py-2 rounded-md text-sm font-medium inline-flex items-center gap-1.5 transition-all duration-300 tracking-wide ${isOpen
+      ? "text-blue-400 bg-blue-900/30"
+      : "text-slate-300 hover:text-white hover:bg-white/5"
     }`;
 
   // Desktop Dropdown Item Styles
   const dropdownItemClasses = ({ isActive }) =>
-    `block px-4 py-2.5 text-sm transition-colors duration-200 border-l-2 ${
-      isActive 
-        ? "bg-blue-900/20 border-blue-500 text-blue-100" 
-        : "border-transparent text-slate-400 hover:bg-white/5 hover:text-white hover:border-slate-500"
+    `block px-4 py-2.5 text-sm transition-colors duration-200 border-l-2 ${isActive
+      ? "bg-blue-900/20 border-blue-500 text-blue-100"
+      : "border-transparent text-slate-400 hover:bg-white/5 hover:text-white hover:border-slate-500"
     }`;
 
   return (
     <nav className="sticky top-0 z-50 w-full bg-[#0b2144] backdrop-blur-md shadow-lg font-sans border-b border-slate-700/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          
+
           {/* --- LOGO SECTION (Visible on Mobile & Desktop) --- */}
           <div className="flex-shrink-0 flex items-center gap-4">
             <Link to="/" className="flex items-center gap-3 group">
               {/* College Logo with Glow Effect */}
               <div className="relative">
                 <div className="absolute inset-0 bg-blue-500 blur-xl opacity-20 rounded-full group-hover:opacity-30 transition-opacity"></div>
-                <img 
-                  src="/iciis_logo.png" 
-                  alt="ICIIS 2026 Logo" 
+                <img
+                  src="/iciis_logo.png"
+                  alt="ICIIS 2026 Logo"
                   className="h-10 md:h-12 w-auto object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
                 />
               </div>
@@ -103,9 +101,9 @@ const Navbar = () => {
           {/* --- DESKTOP NAVIGATION (Hidden on Mobile) --- */}
           <div className="hidden lg:flex items-center space-x-1">
             {mainNavItems.map((item) => (
-              <NavLink 
+              <NavLink
                 key={item.path}
-                to={item.path} 
+                to={item.path}
                 className={navLinkClasses}
               >
                 {item.name}
@@ -215,22 +213,20 @@ const Navbar = () => {
 
       {/* --- MOBILE MENU DROPDOWN (Clean Vertical List) --- */}
       {/* This renders directly below the navbar when open */}
-      <div 
-        className={`lg:hidden bg-[#0f172a] border-t border-slate-800 shadow-2xl overflow-hidden transition-all duration-300 ease-in-out ${
-          isOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
-        }`}
+      <div
+        className={`lg:hidden bg-[#0f172a] border-t border-slate-800 shadow-2xl overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'
+          }`}
       >
         <div className="px-4 pt-2 pb-6 space-y-1">
           {/* Standard Links */}
           {mainNavItems.map((item) => (
-            <NavLink 
+            <NavLink
               key={item.path}
-              to={item.path} 
+              to={item.path}
               className={({ isActive }) =>
-                `block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 border-l-2 ${
-                  isActive 
-                    ? "border-blue-500 bg-blue-900/20 text-blue-400" 
-                    : "border-transparent text-slate-300 hover:bg-white/5 hover:text-white"
+                `block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 border-l-2 ${isActive
+                  ? "border-blue-500 bg-blue-900/20 text-blue-400"
+                  : "border-transparent text-slate-300 hover:bg-white/5 hover:text-white"
                 }`
               }
             >
@@ -253,10 +249,9 @@ const Navbar = () => {
                     key={item.path}
                     to={item.path}
                     className={({ isActive }) =>
-                      `block pl-5 pr-4 py-2.5 text-sm font-medium border-l-2 ml-3 ${
-                        isActive
-                          ? "border-blue-500 text-blue-400 bg-white/5"
-                          : "border-transparent text-slate-400 hover:text-white"
+                      `block pl-5 pr-4 py-2.5 text-sm font-medium border-l-2 ml-3 ${isActive
+                        ? "border-blue-500 text-blue-400 bg-white/5"
+                        : "border-transparent text-slate-400 hover:text-white"
                       }`
                     }
                   >
