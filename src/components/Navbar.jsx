@@ -1,27 +1,36 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { NavLink, Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isCommitteeDropdownOpen, setIsCommitteeDropdownOpen] = useState(false);
+  const [isSubmissionDropdownOpen, setIsSubmissionDropdownOpen] = useState(false);
 
   // Mobile state
   const [isMobileCommitteeOpen, setIsMobileCommitteeOpen] = useState(false);
+  const [isMobileSubmissionOpen, setIsMobileSubmissionOpen] = useState(false);
 
   const { pathname } = useLocation();
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
-  const mainNavItems = [
+  const mainNavItemsBeforeSubmission = [
     { name: "Home", path: "/" },
     { name: "Registration", path: "/registration" },
     // { name: "Program Schedule", path: "/schedule" },
     { name: "Call for Papers", path: "/cfp" },
-    { name: "Paper Submission", path: "/submission" },
+  ];
+
+  const mainNavItemsAfterSubmission = [
     { name: "Keynote Speakers", path: "/keynote" },
     { name: "Accommodation", path: "/attende" },
     { name: "About", path: "/about" },
+  ];
+
+  const submissionDropdownItems = [
+    { name: "Paper Submission", path: "/submission" },
+    { name: "Camera Ready Submission", path: "/crs" },
   ];
 
   const committeeDropdownItems = [
@@ -39,15 +48,12 @@ const Navbar = () => {
   //   { name: "Accommodation", path: "/attende" }
   // ];
 
-  // const submissionDropdownItems = [
-  //   { name: "Paper Submission", path: "/submission" },
-  // { name: "Camera Ready Submission", path: "/crs" },
-  // ];
-
   useEffect(() => {
     setIsOpen(false);
     setIsMobileCommitteeOpen(false);
+    setIsMobileSubmissionOpen(false);
     setIsCommitteeDropdownOpen(false);
+    setIsSubmissionDropdownOpen(false);
   }, [pathname]);
 
   // Desktop Link Styles
@@ -100,7 +106,43 @@ const Navbar = () => {
 
           {/* --- DESKTOP NAVIGATION (Hidden on Mobile) --- */}
           <div className="hidden lg:flex items-center space-x-1">
-            {mainNavItems.map((item) => (
+            {mainNavItemsBeforeSubmission.map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={navLinkClasses}
+              >
+                {item.name}
+              </NavLink>
+            ))}
+
+            <div
+              className="relative"
+              onMouseEnter={() => setIsSubmissionDropdownOpen(true)}
+              onMouseLeave={() => setIsSubmissionDropdownOpen(false)}
+            >
+              <button
+                className={dropdownBtnClasses(isSubmissionDropdownOpen)}
+                aria-haspopup="true"
+                aria-expanded={isSubmissionDropdownOpen}
+                onClick={() => setIsSubmissionDropdownOpen(!isSubmissionDropdownOpen)}
+              >
+                Paper Submission
+                <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isSubmissionDropdownOpen ? 'rotate-180 text-blue-300' : ''}`} />
+              </button>
+
+              <div className={`absolute left-0 mt-2 w-64 rounded-xl shadow-2xl bg-[#1e293b] border border-slate-700 ring-1 ring-black ring-opacity-50 transform transition-all duration-200 origin-top-left ${isSubmissionDropdownOpen ? 'opacity-100 scale-100 translate-y-0' : 'opacity-0 scale-95 -translate-y-2 invisible'}`}>
+                <div className="py-2">
+                  {submissionDropdownItems.map((item) => (
+                    <NavLink key={item.path} to={item.path} className={dropdownItemClasses}>
+                      {item.name}
+                    </NavLink>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {mainNavItemsAfterSubmission.map((item) => (
               <NavLink
                 key={item.path}
                 to={item.path}
@@ -219,7 +261,52 @@ const Navbar = () => {
       >
         <div className="px-4 pt-2 pb-6 space-y-1">
           {/* Standard Links */}
-          {mainNavItems.map((item) => (
+          {mainNavItemsBeforeSubmission.map((item) => (
+            <NavLink
+              key={item.path}
+              to={item.path}
+              className={({ isActive }) =>
+                `block px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 border-l-2 ${isActive
+                  ? "border-blue-500 bg-blue-900/20 text-blue-400"
+                  : "border-transparent text-slate-300 hover:bg-white/5 hover:text-white"
+                }`
+              }
+            >
+              {item.name}
+            </NavLink>
+          ))}
+
+          <div className="space-y-1">
+            <button
+              onClick={() => setIsMobileSubmissionOpen(!isMobileSubmissionOpen)}
+              className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-slate-300 hover:bg-white/5 hover:text-white rounded-lg transition-colors"
+              aria-expanded={isMobileSubmissionOpen}
+              aria-haspopup="true"
+            >
+              <span>Paper Submission</span>
+              <ChevronDown className={`h-5 w-5 transform transition-transform duration-200 ${isMobileSubmissionOpen ? 'rotate-180 text-blue-400' : 'text-slate-500'}`} />
+            </button>
+            <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileSubmissionOpen ? 'max-h-40 opacity-100' : 'max-h-0 opacity-0'}`}>
+              <div className="bg-black/20 rounded-lg py-2 mx-2 border border-white/5">
+                {submissionDropdownItems.map((item) => (
+                  <NavLink
+                    key={item.path}
+                    to={item.path}
+                    className={({ isActive }) =>
+                      `block pl-5 pr-4 py-2.5 text-sm font-medium border-l-2 ml-3 ${isActive
+                        ? "border-blue-500 text-blue-400 bg-white/5"
+                        : "border-transparent text-slate-400 hover:text-white"
+                      }`
+                    }
+                  >
+                    {item.name}
+                  </NavLink>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {mainNavItemsAfterSubmission.map((item) => (
             <NavLink
               key={item.path}
               to={item.path}

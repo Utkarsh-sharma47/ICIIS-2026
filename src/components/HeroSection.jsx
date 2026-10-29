@@ -10,7 +10,9 @@ import { Menu, X, ChevronDown } from "lucide-react";
 function HeroSection() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCommitteeOpen, setIsCommitteeOpen] = useState(false);
+  const [isSubmissionOpen, setIsSubmissionOpen] = useState(false);
   const [isMobileCommitteeOpen, setIsMobileCommitteeOpen] = useState(false);
+  const [isMobileSubmissionOpen, setIsMobileSubmissionOpen] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // --- FIX: Define the toggleMenu function here ---
@@ -18,14 +20,21 @@ function HeroSection() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const mainNavItems = [
+  const mainNavItemsBeforeSubmission = [
     { name: "Home", path: "/" },
     { name: "Registration", path: "/registration" },
     { name: "Call for Papers", path: "/cfp" },
-    { name: "Paper Submission", path: "/submission" },
+  ];
+
+  const mainNavItemsAfterSubmission = [
     { name: "Keynote Speakers", path: "/keynote" },
     { name: "Accommodation", path: "/attende" },
     { name: "About", path: "/about" }
+  ];
+
+  const submissionItems = [
+    { name: "Paper Submission", path: "/submission" },
+    { name: "Camera Ready Submission", path: "/crs" },
   ];
 
   const committeeItems = [
@@ -156,10 +165,47 @@ function HeroSection() {
             </div>
 
             {/* --- NAVIGATION BAR --- */}
-            <nav className="mt-10 w-full max-w-5xl hidden md:block">
+            <nav className="relative z-30 mt-10 w-full max-w-5xl hidden md:block">
               <div className="glass-panel rounded-full px-2 py-2 mx-auto shadow-2xl">
                 <div className="flex items-center justify-between text-sm font-bold">
-                  {mainNavItems.map((item) => (
+                  {mainNavItemsBeforeSubmission.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.path}
+                      className="px-6 py-3 rounded-full nav-item"
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                  <div
+                    className="relative"
+                    onMouseEnter={() => setIsSubmissionOpen(true)}
+                    onMouseLeave={() => setIsSubmissionOpen(false)}
+                  >
+                    <button
+                      className="px-6 py-3 rounded-full nav-item inline-flex items-center gap-1"
+                      aria-haspopup="true"
+                      aria-expanded={isSubmissionOpen}
+                      onClick={() => setIsSubmissionOpen(!isSubmissionOpen)}
+                    >
+                      Paper Submission
+                      <ChevronDown className={`h-4 w-4 transition-transform duration-300 ${isSubmissionOpen ? "rotate-180" : ""}`} />
+                    </button>
+                    <div className={`absolute left-0 z-50 mt-2 w-64 rounded-xl shadow-2xl bg-white border border-slate-200 transform transition-all duration-200 origin-top-left ${isSubmissionOpen ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 -translate-y-2 invisible"}`}>
+                      <div className="py-2">
+                        {submissionItems.map((item) => (
+                          <Link
+                            key={item.path}
+                            to={item.path}
+                            className="block px-4 py-2.5 text-sm text-slate-700 hover:bg-slate-50 hover:text-blue-700 transition-colors"
+                          >
+                            {item.name}
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  {mainNavItemsAfterSubmission.map((item) => (
                     <Link
                       key={item.name}
                       to={item.path}
@@ -246,7 +292,47 @@ function HeroSection() {
             </div>
 
             <div className="px-4 py-6 space-y-2">
-              {mainNavItems.map((item) => (
+              {mainNavItemsBeforeSubmission.map((item) => (
+                <Link
+                  key={item.name}
+                  to={item.path}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block px-4 py-3 text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors font-bold border-l-4 border-transparent hover:border-blue-600"
+                >
+                  {item.name}
+                </Link>
+              ))}
+
+              <div className="space-y-1">
+                <button
+                  onClick={() => setIsMobileSubmissionOpen(!isMobileSubmissionOpen)}
+                  className="w-full flex items-center justify-between px-4 py-3 text-slate-700 hover:text-blue-700 hover:bg-blue-50 rounded-lg transition-colors font-bold border-l-4 border-transparent hover:border-blue-600"
+                  aria-expanded={isMobileSubmissionOpen}
+                  aria-haspopup="true"
+                >
+                  <span>Paper Submission</span>
+                  <ChevronDown className={`h-5 w-5 transition-transform duration-300 ${isMobileSubmissionOpen ? "rotate-180 text-blue-700" : "text-slate-500"}`} />
+                </button>
+                <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileSubmissionOpen ? "max-h-40 opacity-100" : "max-h-0 opacity-0"}`}>
+                  <div className="bg-slate-50 rounded-lg py-2 mx-1 border border-slate-200">
+                    {submissionItems.map((item) => (
+                      <Link
+                        key={item.path}
+                        to={item.path}
+                        onClick={() => {
+                          setIsMobileSubmissionOpen(false);
+                          setIsMenuOpen(false);
+                        }}
+                        className="block pl-5 pr-4 py-2.5 text-sm font-semibold border-l-2 ml-3 border-transparent text-slate-600 hover:text-blue-700 hover:border-blue-600 transition-colors"
+                      >
+                        {item.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {mainNavItemsAfterSubmission.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
