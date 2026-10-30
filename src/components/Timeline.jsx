@@ -63,6 +63,7 @@ const TimeLine = () => {
             done: false,
         },
         {
+            oldDate: "12 November, 2026",
             newDate: "20 October, 2026",
             label: "Camera Ready Submission",
         },
