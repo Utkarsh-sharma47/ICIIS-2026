@@ -127,7 +127,7 @@ function CRS() {
               note that XXX is the three-digit paper ID (zero-padded if
               necessary):
               <ul className={listClasses}>
-                <li>IEEE PDF eXpress verified paper (as XXX.pdf)</li>
+                <li>IEEE PDF eXpress verified paper (as XXX.pdf) <p>[Please approve the generated pdf on IEEE PDF eXpress]</p></li>
                 <li>
                   Duly signed copyright form downloaded from IEEE (as CR-XXX.pdf)
                 </li>

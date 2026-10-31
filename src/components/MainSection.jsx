@@ -5,7 +5,7 @@ import { CalendarDays, Layers } from 'lucide-react';
 function MainSection() {
     const marqueeUpdates = [
         {
-            text: "First Phase Paper Decision emails have been sent to the Authors.",
+            text: "All the registered authors of accepted papers are required to upload camera ready file using IEEE pdfexpress only as mentioned on camera ready submission instructions.",
             url: null
         }
     ];
