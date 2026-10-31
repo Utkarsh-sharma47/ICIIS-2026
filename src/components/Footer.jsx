@@ -46,6 +46,7 @@ function Footer() {
               {[
                 { name: "Call for Papers", path: "/cfp" },
                 { name: "Paper Submission", path: "/submission" },
+                { name: "Camera Ready Submission", path: "/crs" },
                 { name: "Registration Details", path: "/registration" },
                 { name: "Committee", path: "/committee" }
               ].map((link) => (
