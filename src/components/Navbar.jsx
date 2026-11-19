@@ -18,7 +18,7 @@ const Navbar = () => {
   const mainNavItemsBeforeSubmission = [
     { name: "Home", path: "/" },
     { name: "Registration", path: "/registration" },
-    // { name: "Program Schedule", path: "/schedule" },
+    { name: "Program Schedule", path: "/schedule" },
     { name: "Call for Papers", path: "/cfp" },
   ];
 
