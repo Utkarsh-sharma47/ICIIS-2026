@@ -138,7 +138,8 @@ function Registration() {
 
                     {/* Registration Button */}
                     <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSdiH4uRKpEKe00AT9a9aH4jVRMntCdIFFoxOvYdWjGYV_hI5w/viewform"
+                        // href="https://docs.google.com/forms/d/e/1FAIpQLSdiH4uRKpEKe00AT9a9aH4jVRMntCdIFFoxOvYdWjGYV_hI5w/viewform"
+                        href="#"
                         className="inline-flex items-center gap-2 bg-[#0f172a] hover:bg-blue-700 text-white text-sm font-medium px-6 py-3 rounded transition-all duration-300 shadow-sm hover:shadow-md"
                     >
                         Proceed to Registration Form <ArrowRight className="w-4 h-4" />
