@@ -1,4 +1,5 @@
 import { Footer, Navbar } from '../components'
+import accommodationInformation from '../assets/Accommodation_Information.docx?url'
 
 function Attende() {
     return (
@@ -30,6 +31,19 @@ function Attende() {
                     <div className="mt-4">
                         For further details regarding accommodation refer to, <a href="https://iiitm.ac.in/public/uploads/media_uploads/1770215155_Visitor-Hostel-Booking-Form.pdf" className="text-blue-600 underline">Hostel Booking Form (Category B)</a>
                     </div>
+                </div>
+
+                <div className="pb-8 text-left">
+                    <div className="text-2xl font-semibold mb-4">
+                        Accommodation Information for ICIIS 2026 Participants
+                    </div>
+                    <a
+                        href={accommodationInformation}
+                        download="Accommodation_Information.docx"
+                        className="inline-flex items-center justify-center bg-[#0f172a] hover:bg-blue-700 text-white font-medium px-8 py-3 rounded-full transition-all shadow-sm hover:shadow-lg transform hover:-translate-y-0.5"
+                    >
+                        Accommodation Information
+                    </a>
                 </div>
 
             </div>
